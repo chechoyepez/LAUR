@@ -1,0 +1,124 @@
+PROGRAM LAUR.IO.TEST
+ 
+    PRINT "Program started "
+    Stime = SYSTEM(12)
+    FOrd = ""
+    Etime = SYSTEM(12)
+	
+    PRINT "Time taken for Initialise Variable:   ":Etime - Stime
+    Stime = SYSTEM(12)
+    OPEN "F.AA.ACTIVITY.TEST" TO FOrd ELSE
+        ABORT 202 , "UNABLE TO OPEN ORD"
+    END
+    Etime = SYSTEM(12)
+    PRINT "Time taken for Opening Connection to reach table:   ":Etime - Stime
+
+    Stime = SYSTEM(12)
+    EXECUTE "hostname " CAPTURING Hout
+    PRINT Hout
+    Etime = SYSTEM(12)
+    PRINT "Time taken for Execute host Name:   ":Etime - Stime
+
+    TestRec = "THIS IS TEST RECORD":@FM:"THIS IS SECOND LINE":@FM:"THIS IS THIRD LINE":@FM:"THIS IS FOUR LINE":@FM:"THIS IS FIFTH LINE":@FM:"THIS IS SIXTH LINE":
+    Stime = SYSTEM(12)
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        WRITE TestRec TO FOrd , RecId
+	zTime = SYSTEM(12)
+	PRINT "Time for WRITE :   ":RecId:"    ":zTime - yTime
+
+    NEXT Cnt
+    Etime = SYSTEM(12)
+ 
+    PRINT "Time for 5000 record WRITE :   ":Etime - Stime
+ 
+    Stime = SYSTEM(12)
+    FOR Cnt = 1 TO 5000
+        RecId = "TEST":Cnt
+	yTime = SYSTEM(12)
+        READ TestRec FROM FOrd , RecId ELSE
+            PRINT "UNABLE TO READ RECORD  ": RecId
+        END
+	zTime = SYSTEM(12)
+	PRINT "Time for READ :   ":RecId:"    ":zTime - yTime
+    NEXT Cnt
+    Etime = SYSTEM(12)
+ 
+    PRINT "Time for 5000 READ:  ":Etime - Stime
+ 
+    Stime = SYSTEM(12)
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        READU TestRec FROM FOrd , RecId ELSE
+            PRINT "UNABLE TO READU RECORD  ": RecId
+        END
+	zTime = SYSTEM(12)
+	PRINT "Time for READU :   ":RecId:"    ":zTime - yTime
+    NEXT Cnt
+    Etime = SYSTEM(12)
+ 
+    PRINT "Time for 5000 READU:  ":Etime - Stime
+ 
+    Stime = SYSTEM(12)
+ 
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        DELETE FOrd , RecId
+	zTime = SYSTEM(12)
+	PRINT "Time for DELETE :   ":RecId:"    ":zTime - yTime	
+    NEXT Cnt
+
+    Etime = SYSTEM(12)
+    PRINT "Time for 5000 DELETE ":Etime - Stime
+ 
+* Test for LOB segments write....
+ 	Stime = SYSTEM(12)
+     BigRec = STR("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",11)
+     BigRec := "":@FM:STR("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",11)
+     BigRec := "":@FM:STR("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",11)
+     BigRec := "":@FM:STR("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",11)
+     TestRec = BigRec 
+	Etime = SYSTEM(12)
+	PRINT "Time taken for Initialise Variable:   ":Etime - Stime
+     Stime = SYSTEM(12)
+
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        WRITE TestRec TO FOrd , RecId
+	zTime = SYSTEM(12)
+	PRINT "Time for one Big rec WRITE :   ":RecId:"    ":zTime - yTime
+    NEXT Cnt
+    Etime = SYSTEM(12)
+ 
+    PRINT "Time for WRITE to Big Record:  ":Etime - Stime
+ 
+    Stime = SYSTEM(12)
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        READ TestRec FROM FOrd , RecId ELSE
+            PRINT "UNABLE TO READ RECORD  ": RecId
+        END
+	zTime = SYSTEM(12)
+	PRINT "Time for one Big rec READ:   ":RecId:"    ":zTime - yTime
+    NEXT Cnt
+    Etime = SYSTEM(12)
+ 
+    PRINT "Time for 5000 READ to Big Record:  ":Etime - Stime
+    Stime = SYSTEM(12)
+ 
+    FOR Cnt = 1 TO 5000
+	yTime = SYSTEM(12)
+        RecId = "TEST":Cnt
+        DELETE FOrd , RecId
+	zTime = SYSTEM(12)
+	PRINT "Time for one Big rec DELETE:   ":RecId:"    ":zTime - yTime
+    NEXT Cnt
+    Etime = SYSTEM(12)
+    PRINT "Time for 5000 DELETE to Big Record:  ":Etime - Stime
+ 
+END
