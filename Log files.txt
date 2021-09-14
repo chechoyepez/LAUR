@@ -1,0 +1,250 @@
+<tSS version="1.1"><t24version>R17</t24version><t24pid>303432524</t24pid><t24ofssource>GCS</t24ofssource><clientIP/></tSS>
+AA.ARRANGEMENT.ACTIVITY,LBC.AA.DRILL.AG/I/PROCESS,YepezC/Ch3ch074/CA0017623,AAACT21255M7CD4YHJ
+AAACT21255M7CD4YHJ//-1/NO,ARRANGEMENT:1:1=  INPUT MISSING,ARRANGEMENT:1:1=ACCOUNT NOT AN ARRANGEMENT,ACTIVITY:1:1=MANDATORY INPUT
+AA.ARRANGEMENT.ACTIVITY,LBC.AA.DRILL.AG/I/PROCESS,YepezC/Ch3ch074/CA0017623,AAACT21255M7CD4YHJ
+Source changed to /apps/Temenos/t24evl/T24/CLIENT_BUILD/UD/KAT.BP/AA.UPDATE.AGENT.CUSTOMER.b
+57 :     DEBUG
+TAFJ Debugger-> S
+
+58 :     IF AGENT.CUSTOMER.ID THEN
+TAFJ Debugger-> V AGENT.CUSTOMER.ID
+AGENT.CUSTOMER.ID : (-1) AA21252SVXJ7-100000006]100000005
+TAFJ Debugger-> S
+
+59 :         GOSUB INITIALISE
+TAFJ Debugger-> V R.AGCU.REC
+R.AGCU.REC : (-1) AA2125561YSG^
+TAFJ Debugger-> s
+
+71 :     WRITE.FLAG = '' ; F.AA.AGENT.CUSTOMER = '' ; ERR.MSG = '' ; R.AA.AGENT.CUSTOMER = ''  ; PREVIOUS.ID = '' ; R.PREVIOUS.AG.CUSTOMER = '' ; TIME.STAMP = ''
+TAFJ Debugger-> S
+
+73 :     AA.ARR.ID = AA.Framework.getArrId()
+TAFJ Debugger-> S
+
+74 :     AA.ARR.EFF.DATE = AA.Framework.getActivityEffDate()
+TAFJ Debugger-> S
+
+76 :     ActivityId          = AA.Framework.getActivityId()                          ;* Current activity id
+TAFJ Debugger-> S
+
+77 :     ThisActivity        = ActivityId<AA.Framework.ActActivity>
+TAFJ Debugger-> S
+
+78 :     SessionNo           = EB.SystemTables.getCTTwoFouSessionNo()        ;* to add session number to work file id.
+TAFJ Debugger-> S
+
+80 :     F.AA.AGENT.CUSTOMER.LIST = '' ; LIST.ERR = ''
+TAFJ Debugger-> S
+
+82 :     PREVIOUS.PROP.REC = AA.Framework.getPrevPropRec()
+TAFJ Debugger-> S
+
+84 :     IF NOT(PREVIOUS.PROP.REC) THEN
+TAFJ Debugger-> V PREVIOUS.PROP.REC
+PREVIOUS.PROP.REC : (-1)
+TAFJ Debugger-> S
+
+85 :         OPTION = ''
+TAFJ Debugger-> S
+
+86 :         ID.COMP = AA.Framework.getArrPcId()
+TAFJ Debugger-> S
+
+87 :         AA.Framework.GetPreviousPropertyRecord(OPTION, "AGENT.COMMISSION", ID.COMP, AA.ARR.EFF.DATE, PREVIOUS.PROP.REC, RET.ERROR)
+TAFJ Debugger-> V ID.COMP
+ID.COMP : (-1) 20210912.3^AA2125561YSG^AL.COMMISSION
+TAFJ Debugger-> S
+
+88 :     END
+TAFJ Debugger-> V PREVIOUS.PROP.REC
+PREVIOUS.PROP.REC : (-1) LENDING-NEW-ARRANGEMENT^UPDATE^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^AA2125561YSG^AL.COMMISSION^20210912.1^^^^^^^^^1^837_YepezC.UI__OFS_GCS_AAACT212554J99P2ZC^2109132246^837_YepezC.UI_OFS_GCS_AAACT212554J99P2ZC^CA0017623^1
+TAFJ Debugger-> S
+
+90 :     R.AA.AGENT.CUSTOMER = AA.AgentCommission.AaAgentCustomer.ReadU(AGENT.CUSTOMER.ID, ERR.MSG, "")
+TAFJ Debugger-> V AGENT.CUSTOMER.ID
+AGENT.CUSTOMER.ID : (-1) AA21252SVXJ7-100000006]100000005
+TAFJ Debugger-> S
+
+93 :     AGENT.LIST.ID = FIELD(AGENT.CUSTOMER.ID,'-',1)
+TAFJ Debugger-> V R.AA.AGENT.CUSTOMER
+R.AA.AGENT.CUSTOMER : (-1)
+TAFJ Debugger-> V ERR.MSG
+ERR.MSG : (-1) RECORD NOT FOUND
+TAFJ Debugger-> S
+
+94 :     FIN.CUSTOMER = FIELD(AGENT.CUSTOMER.ID,'-',2)
+TAFJ Debugger-> S
+
+95 :     LOCATE AGENT.LIST.ID IN PREVIOUS.PROP.REC<AA.AgentCommission.AgentCommission.AgcommAgentArrId,1> SETTING ARR.POS THEN  ;* to locate the agent arrangement id in previous property
+TAFJ Debugger-> V AGENT.LIST.ID
+AGENT.LIST.ID : (-1) AA21252SVXJ7
+TAFJ Debugger-> V FIN.CUSTOMER
+FIN.CUSTOMER : (-1) 100000006]100000005
+TAFJ Debugger-> S
+
+98 :     END
+TAFJ Debugger-> S
+
+99 :     IF ThisActivity EQ "TAKEOVER" THEN ;* For migrated contracts read the work file
+TAFJ Debugger-> S
+
+103 :     END ELSE
+TAFJ Debugger-> S
+
+104 :         R.AA.AGENT.CUSTOMER.LIST = AA.AgentCommission.AgentCustomerList.ReadU(AGENT.LIST.ID, LIST.ERR, "")
+TAFJ Debugger-> S
+
+106 :     END
+TAFJ Debugger-> V AGENT.LIST.ID
+AGENT.LIST.ID : (-1) AA21252SVXJ7
+TAFJ Debugger-> V R.AA.AGENT.CUSTOMER.LIST
+R.AA.AGENT.CUSTOMER.LIST : (-1) AA21252SVXJ7-100016046^AA21252SVXJ7-100036608^AA21252SVXJ7-100038019^AA21252SVXJ7-100054295^AA21252SVXJ7-100069810^AA21252SVXJ7-100079536^AA21252SVXJ7-100024888]100040236^AA21252SVXJ7-100056083]100064864^AA21252SVXJ7-100085220]100031270^AA21252SVXJ7-100016046]100000004^AA21252SVXJ7-100000005]100000006^AA21252SVXJ7-100000006]100000005
+TAFJ Debugger-> S
+
+107 : RETURN
+TAFJ Debugger-> S
+
+60 :         GOSUB CHECK.UPDATION
+TAFJ Debugger-> s
+
+113 :     BEGIN CASE
+TAFJ Debugger-> S
+
+114 :         CASE UPDATE.MODE<1> = 'UPDATE'
+TAFJ Debugger-> V UPDATE.MODE
+UPDATE.MODE : (-1) UPDATE^REMOVE
+TAFJ Debugger-> S
+
+115 :             GOSUB PROCESS.UPDATE.ACTION
+TAFJ Debugger-> s
+
+147 :     IF NOT(ERR.MSG) THEN      ;* Record exists
+TAFJ Debugger-> S
+
+159 :     END ELSE
+TAFJ Debugger-> S
+
+160 :         R.AA.AGENT.CUSTOMER<AA.AgentCommission.AaAgentCustomer.AaAgcuArrangement> = R.AGCU.REC<1>
+TAFJ Debugger-> S
+
+161 :         WRITE.FLAG = 1
+TAFJ Debugger-> S
+
+162 :     END
+TAFJ Debugger-> j-g
+161 : AA.UPDATE.AGENT.CUSTOMER
+585 : AA.AGENT.COMMISSION.UPDATE
+107 : AA.PROPERTY.TEMPLATE.INVOKE.ACTION
+641 : AA.PROPERTY.TEMPLATE.ARR.ACTION
+278 : AA.PROPERTY.TEMPLATE.AUTHORISE
+614 : THE.TEMPLATE
+158 : AA.PROPERTY.TEMPLATE
+31 : AA.ARR.AGENT.COMMISSION
+55 : EB.EXECUTE.APPLICATION
+1866 : OFS.REQUEST.MANAGER
+2530 : OFS.SESSION.MANAGER
+127 : OFS.PROCESS.MANAGER
+1089 : OFS.BULK.MANAGER
+236 : tSS
+TAFJ Debugger-> S
+
+164 :     IF NOT(LIST.ERR) THEN
+TAFJ Debugger-> S
+
+165 :         LOCATE AGENT.CUSTOMER.ID IN R.AA.AGENT.CUSTOMER.LIST SETTING LIST.POS ELSE
+TAFJ Debugger-> S
+
+168 :         END
+TAFJ Debugger-> S
+
+172 :     END
+TAFJ Debugger-> S
+
+174 :     IF WRITE.FLAG = 1 THEN
+TAFJ Debugger-> S
+
+175 :         GOSUB DO.WRITE        ;* Do write or delete
+TAFJ Debugger-> s
+
+228 :     IF R.AA.AGENT.CUSTOMER<AA.AgentCommission.AaAgentCustomer.AaAgcuArrangement> THEN        ;* Normal update
+TAFJ Debugger-> S
+
+229 :         AA.AgentCommission.AaAgentCustomer.Write(AGENT.CUSTOMER.ID, R.AA.AGENT.CUSTOMER)
+TAFJ Debugger-> V R.AA.AGENT.CUSTOMER
+R.AA.AGENT.CUSTOMER : (-1) AA2125561YSG
+TAFJ Debugger-> V AGENT.CUSTOMER.ID
+AGENT.CUSTOMER.ID : (-1) AA21252SVXJ7-100000006]100000005
+TAFJ Debugger-> S
+
+231 :         IF LIST.WRITE.FLAG THEN
+TAFJ Debugger-> S
+
+238 :         END
+TAFJ Debugger-> S
+
+242 :     END
+TAFJ Debugger-> S
+
+243 :     IF R.AA.AGENT.CUSTOMER.LIST ELSE
+TAFJ Debugger-> S
+
+246 :     END
+TAFJ Debugger-> S
+
+247 : RETURN
+TAFJ Debugger-> S
+
+179 :     END
+TAFJ Debugger-> S
+
+181 : RETURN
+TAFJ Debugger-> S
+
+118 :     END CASE
+TAFJ Debugger-> S
+
+120 :     BEGIN CASE
+TAFJ Debugger-> S
+
+121 :         CASE UPDATE.MODE<1> = 'UPDATE' AND UPDATE.MODE<2> = 'REMOVE'
+TAFJ Debugger-> S
+
+122 :             LOCATE R.AGCU.REC<1> IN R.PREVIOUS.AG.CUSTOMER<AA.AgentCommission.AaAgentCustomer.AaAgcuArrangement,1> SETTING PRV.POS THEN
+TAFJ Debugger-> V R.AGCU.REC
+R.AGCU.REC : (-1) AA2125561YSG^
+TAFJ Debugger-> V R.PREVIOUS.AG.CUSTOMER
+R.PREVIOUS.AG.CUSTOMER : (-1)
+TAFJ Debugger-> V UPDATE.MODE
+UPDATE.MODE : (-1) UPDATE^REMOVE
+TAFJ Debugger-> S
+
+132 :             END
+TAFJ Debugger-> S
+
+139 :     END CASE
+TAFJ Debugger-> S
+
+140 : RETURN
+TAFJ Debugger-> S
+
+61 :     END
+TAFJ Debugger-> S
+
+64 : RETURN
+TAFJ Debugger-> S
+
+Cannot find file /glointeg1/Bankareas/r17upd/tafjupd/T24/UD/TAFJ.SOURCE/R17_AA_AgentCommission_19.SOURCE/AA/AA_AgentCommission/./Source/Private/AA.AGENT.COMMISSION.UPDATE.b
+Please enter the full path to the source or 'I' to ignore.
+TAFJ Debugger-> I
+Source changed to /apps/Temenos/t24evl/T24/CLIENT_BUILD/UD/KAT.BP/AA.UPDATE.AGENT.CUSTOMER.b
+57 :     DEBUG
+TAFJ Debugger-> S
+
+58 :     IF AGENT.CUSTOMER.ID THEN
+TAFJ Debugger-> Q
+Are you sure ?
+Y
+
+
+$ t
