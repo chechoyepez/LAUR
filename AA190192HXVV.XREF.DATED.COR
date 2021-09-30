@@ -1,0 +1,77 @@
+SUBROUTINE AA190192HXVV.XREF.DATED.COR
+
+****************************************************************
+
+*Routine to get incorrect XREF DETAILS
+
+****************************************************************
+
+$INCLUDE I_COMMON
+$INCLUDE I_EQUATE
+$INCLUDE I_F.AA.ARRANGEMENT
+$INCLUDE I_F.AA.PROPERTY
+
+ PRINT "Program Started AA190192HXVV.XREF.DATED.COR"
+
+GOSUB INIT
+GOSUB PROCESS
+WRITE R.XREF TO F.XREF,ARR.ID
+
+
+	PRINT "Program Compledted Successfully AA190192HXVV.XREF.DATED.COR"
+
+RETURN
+
+INIT:
+
+    FN.AA = "F.AA.ARRANGEMENT"
+    F.AA = ""
+    CALL OPF(FN.AA, F.AA)
+
+    FN.XREF = "F.AA.ARRANGEMENT.DATED.XREF"
+    F.XREF = ""
+    CALL OPF(FN.XREF, F.XREF)
+	
+    FN.SL = "&SAVEDLISTS&"
+    F.SL = ""
+    CALL OPF(FN.SL, F.SL)
+
+	ARR.ID = 'AA190192HXVV'
+
+	CALL F.READ(FN.XREF, ARR.ID, R.XREF, F.XREF, ERR.XREF)
+	CPY.ID = ARR.ID:'.TEMP'
+	WRITE R.XREF TO F.XREF,CPY.ID
+
+RETURN
+
+
+PROCESS:
+
+	Temp.Property = '';Temp.Dated = ''
+	test.Date = ''	
+
+	Temp.Property = R.XREF<1>
+	Temp.Dated = R.XREF<5>
+	Temp.Property = CHANGE(Temp.Property,VM,FM)
+	LOCATE 'ACCOUNT' IN Temp.Property SETTING V.POS THEN
+		Tmp.Pos = V.POS 
+	END
+    
+	Acc.Prop.Dated = Temp.Dated<1,V.POS>
+
+	Acc.Prop.Dated = CHANGE(Acc.Prop.Dated,SM,VM)
+
+	Acc.Prop.Dated = CHANGE(Acc.Prop.Dated,VM,FM)
+
+	FINDSTR '20210228' IN Acc.Prop.Dated SETTING K.POS THEN
+	
+		CRT Temp.Dated<1,V.POS,K.POS>
+	
+		Temp.Dated<1,V.POS,K.POS> = '20210228.3'
+
+	END
+	
+	R.XREF<5> = Temp.Dated
+RETURN
+
+END

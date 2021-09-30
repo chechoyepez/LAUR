@@ -1,0 +1,109 @@
+SUBROUTINE AA190192HXVV.CORR.INT
+
+*****************************************************************
+*This routine used to correct the incorrect AIA for AA190199F88V 
+*****************************************************************
+
+$INSERT I_COMMON
+$INSERT I_EQUATE
+$INSERT I_F.AA.INTEREST.ACCRUALS
+$INSERT I_F.COMPANY
+$INSERT I_F.AA.ARRANGEMENT
+
+	CRT "Program AA190192HXVV.CORR.INT Started"
+	FN.AA = 'F.AA.INTEREST.ACCRUALS' ; FV.AA = ''
+	CALL OPF(FN.AA,FV.AA)
+
+	FN.AAW = 'F.AA.INTEREST.ACCRUALS.WORK' ; FV.AAW = ''
+	CALL OPF(FN.AAW,FV.AAW)
+
+
+	Fn.Arr = 'F.AA.ARRANGEMENT' ; F.Arr = ''
+	CALL OPF(Fn.Arr,F.Arr)
+
+	FN.SL = '&SAVEDLISTS&' ; FV.SL = ''
+	CALL OPF(FN.SL,FV.SL)
+
+	*SEL.CMD = 'SELECT ':FN.AA
+	SEL.LIST = '' ; ERR.CMD = '';SL.ERR = ''
+	*CALL EB.READLIST(SEL.CMD,SEL.LIST,'',NO.REC,ERR.CMD)
+	SEL.LIST = 'AA190192HXVV'
+*CALL F.READ(FN.SL,'PROB.IDS',SEL.LIST,FV.SL,SL.ERR)
+
+	IF SEL.LIST EQ '' THEN 
+		PRINT 'NO RECORD FOUND'
+		RETURN
+	END
+	
+	PROB.ARR = '';PROB.ARRW = ''
+	
+ FOR GK = 1 TO DCOUNT(SEL.LIST,@FM)
+		AAID = '' ; R.AA = '' ; ERR.AA = '';Aa.ID = '';R.Arr = ''
+		FLD.92 = '' ; FLD.93 = '';W.FLD.92 = '' ; W.FLD.93 = ''
+
+		AAID = SEL.LIST<GK>
+		*Aa.ID = FIELD(AAID,'-',1)
+		Aa.ID = 'AA190192HXVV-PRINCIPALINT'
+
+		READ R.Arr FROM F.Arr,Aa.ID ELSE Err.Arr = ''
+	
+		IF R.Arr<AA.ARR.ARR.STATUS> NE 'CLOSE' THEN
+		
+			IF R.Arr<AA.ARR.ARR.STATUS> NE 'PENDING.CLOSURE' THEN
+		
+			  READ R.AA FROM FV.AA,Aa.ID THEN   
+				FLD.92 = R.AA<92>
+				FLD.93 = R.AA<93>
+				IF DCOUNT(FLD.92,@VM) LT DCOUNT(FLD.93,@VM) THEN
+					JJ = '' ; TEMP.ARR = ''
+					FOR JJ =1  TO DCOUNT(FLD.92,@VM) 
+						IF TEMP.ARR EQ '' THEN
+							TEMP.ARR = R.AA<93,JJ>
+						END ELSE
+							TEMP.ARR<1,-1> = R.AA<93,JJ>
+						END
+					NEXT JJ
+					
+					R.AA<93> = TEMP.ARR
+					R.AA<AA.INT.ACC.LINKED.RATE.CHANGE> = ''
+					
+					WRITE R.AA TO FV.AA,Aa.ID
+					PRINT 'CORRECTED ':Aa.ID
+					PROB.ARR<-1> = Aa.ID
+				END
+				
+			 END
+			
+			 READ R.AAW FROM FV.AAW,Aa.ID THEN			
+				W.FLD.92 = R.AAW<92>
+				W.FLD.93 = R.AAW<93>
+				IF DCOUNT(W.FLD.92,@VM) LT DCOUNT(W.FLD.93,@VM) THEN
+					W.JJ = '' ; W.TEMP.ARR = ''
+					FOR W.JJ =1  TO DCOUNT(W.FLD.92,@VM)
+        
+						IF W.TEMP.ARR EQ '' THEN
+							W.TEMP.ARR = R.AAW<93,JJ>
+						END ELSE
+							W.TEMP.ARR<1,-1> = R.AAW<93,JJ>
+						END
+					NEXT W.JJ
+				
+					R.AAW<93> = W.TEMP.ARR
+					R.AAW<AA.INT.ACC.LINKED.RATE.CHANGE> = ''
+					
+					WRITE R.AAW TO FV.AAW,Aa.ID
+					PRINT 'CORRECTED INT WORK':Aa.ID
+					PROB.ARRW<-1> = Aa.ID
+				END
+				 
+			 END
+		END
+	END
+	
+ NEXT GK
+ 
+	CRT "Program AA190192HXVV.CORR.INT Completed Successfully"
+
+RETURN
+END
+    
