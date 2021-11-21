@@ -1,14 +1,14 @@
-* @ValidationCode : MjotNzU3NDM3NzEyOkNwMTI1MjoxNjA2MzkxNzA4ODU5OnNhcmFueWEuc3VuZGFycmFvOjU6MDowOjE6ZmFsc2U6Ti9BOlIxN19BTVIuMDoxNjU2OjcxNw==
-* @ValidationInfo : Timestamp         : 26 Nov 2020 17:25:08
+* @ValidationCode : MjotMTc3MTA1MDI3OTpDcDEyNTI6MTYzNDc5OTA4MTA5Mjp2LmRlZXBpa2E6NjowOjA6LTE6ZmFsc2U6Ti9BOlIxN19TUDU4LjA6MTY5MTo3Nzg=
+* @ValidationInfo : Timestamp         : 21 Oct 2021 12:21:21
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : saranya.sundarrao
-* @ValidationInfo : Nb tests success  : 5
+* @ValidationInfo : User Name         : v.deepika
+* @ValidationInfo : Nb tests success  : 6
 * @ValidationInfo : Nb tests failure  : 0
 * @ValidationInfo : Rating            : N/A
-* @ValidationInfo : Coverage          : 717/1656 (43.2%)
-* @ValidationInfo : Strict flag       : true
+* @ValidationInfo : Coverage          : 778/1691 (46.0%)
+* @ValidationInfo : Strict flag       : false
 * @ValidationInfo : Bypass GateKeeper : false
-* @ValidationInfo : Compiler Version  : R17_AMR.0
+* @ValidationInfo : Compiler Version  : R17_SP58.0
 * <Rating>10325</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AA.PaymentSchedule
@@ -583,6 +583,11 @@ SUBROUTINE AA.PAYMENT.SCHEDULE.VALIDATE
 *29/06/20 - Task        :4098211
 *            Enhancement :3376694
 *            RFR related validations introduced for payment schedule
+*
+*21/10/21 -  Task   : 4622264
+*            Defect : 4567168
+*            System throws an error message "DUPLICATE PRINCIPALINT PROPERTY ON" while Periodic reset activity is triggerred*
+*
 *** </region>
 *-----------------------------------------------------------------------------
 *** <region name= INSERTS>
@@ -2408,6 +2413,9 @@ ARRANGEMENT.CROSSVAL:
     IF NOT(tmp.ETEXT) AND AA.Framework.getProductArr() EQ AA.Framework.AaArrangement AND DATE.CONVENTION THEN ;* If error, no point in building the entire schedules
         EB.SystemTables.setEtext(tmp.ETEXT)
         GOSUB CHECK.FULL.SCHEDULES
+        IF NOT(DUP.ERR) THEN
+            GOSUB CHECK.DUPLICATE.INTEREST.SCHEDULE
+        END
     END
 
     GOSUB CHECK.PROPERTY.IN.ARRANGEMENT ;* Check property in Arrangement
@@ -2702,6 +2710,7 @@ CHECK.FULL.SCHEDULES:
 
     PAYMENT.DATES.COUNT = DCOUNT(PAYMENT.DATES, @FM)
     OVERRIDE.SET = ""
+    DUP.ERR = ''
     YI = 1
 
     LOOP
@@ -2789,6 +2798,49 @@ CHECK.DISBURSEMENT.SCHEDULE:
 RETURN
 *** </region>
 *------------------------------------------------------------------------------
+*** <region name= Check Duplicate Interest Schedule>
+*** <desc>If interest property overlaps, then force start and end date </desc>
+CHECK.DUPLICATE.INTEREST.SCHEDULE:
+    
+    IF PRODUCT.LINE EQ 'LENDING' THEN
+        GOSUB CHECK.CHANGE.SCHEDULE ;*Check for change in ps condition
+        IF CHANGE.SCHEDULE THEN ;* If there is a chane in ps condition record, then validate it.
+            errorDetails = ''
+            AA.PaymentSchedule.PaymentScheduleStartEndDateValidate(R.PAYMENT.SCHEDULE, "", "", errorDetails)
+            IF errorDetails NE '' THEN
+                ERROR.DETAILS = errorDetails
+                GOSUB HANDLE.ERROR    ;* To raise errors against the field
+            END
+        END
+    END
+ 
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= Check Change schedule>
+*** <desc>Check Change schedule</desc>
+CHECK.CHANGE.SCHEDULE:
+    
+    CHANGE.SCHEDULE = ''
+    R.OLD.PAYMENT.SCHEDULE = EB.SystemTables.getDynArrayFromROld()
+    
+    IF R.OLD.PAYMENT.SCHEDULE THEN
+        START.POS = AA.PaymentSchedule.PaymentSchedule.PsPaymentType
+        FINAL.POS = AA.PaymentSchedule.PaymentSchedule.PsEndDate
+        LOOP
+        WHILE START.POS LE FINAL.POS AND NOT(CHANGE.SCHEDULE)
+            IF R.OLD.PAYMENT.SCHEDULE<START.POS> NE R.PAYMENT.SCHEDULE<START.POS> THEN     ;* Make sure PS changes was done
+                CHANGE.SCHEDULE = 1   ;* Something has got changed, need to validate!!
+            END
+            START.POS ++
+        REPEAT
+    END ELSE
+        CHANGE.SCHEDULE = 1   ;* It is a new input, needs validation!!
+    END
+    
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
 *** <region name= Validate Disburse amount against available commitment amount>
 *** <desc>Validate Disburse amount against available commitment amount</desc>
 VALIDATE.DISBURSE.AVAIL.AMOUNT:
@@ -2969,6 +3021,9 @@ CHECK.DUPLICATE.PROPERTIES:
                 IF PROPERTY.CLASSES<1,MV.I> NE "ACCOUNT" THEN
                     EB.SystemTables.setEtext("AA.PS.DUP.PROPERTY.DATE.NOT.ALLOWED":@FM:PROPERTIES<1,MV.I>:@VM:OCONV(ICONV(PAYMENT.DATES<YI>,"DE"), "DE"))
                     EB.ErrorProcessing.StoreEndError()
+                    IF PROPERTY.CLASSES<1,MV.I> EQ 'INTEREST' THEN
+                        DUP.ERR = 1
+                    END
                 END ELSE
                     IF NOT(OVERRIDE.SET) THEN
                         OVERRIDE.SET = 1
