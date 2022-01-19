@@ -1,0 +1,676 @@
+AA190191BGRP
+
+ 20210913 20210913 AAACT21256V13X86DX LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210913 AAACT21256R57BVTTJ LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21256R1445.76\B0220210913 AAACT21256R57BVT96 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21256ZJQ70\B02      20210913 AAACT2125642D8P1DZ LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210913 AAACT2125642D8P1DY LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT2125641445.76\B0220210913 AAACT2125642D8P16J LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210913 AAACT2125642D8P101 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210913 AAACT2125642D8P0PC LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210830 20210830 AAACT2124257LJX23N LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210830 AAACT21242W6H80JJW LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21242W1445.76\B0220210830 AAACT21242W6H80J08 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21242RWNZ0\B02      20210830 AAACT21242JWGFCXZF LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210830 AAACT21242JWGFCXZD LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21242J1445.76\B0220210830 AAACT21242JWGFCXRY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210830 AAACT21242JWGFCXNP LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210830 AAACT21242JWGFCXG7 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210816 20210816 AAACT21228DMZVL0JN LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210816 AAACT21228NY4SWZS4 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21228N1445.76\B0220210816 AAACT21228NY4SWZ7N LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT2122800X20\B02      20210816 AAACT21228NWTL5J0C LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210816 AAACT21228NWTL5J0B LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21228N1445.76\B0220210816 AAACT21228NWTL5HSY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210816 AAACT21228NWTL5HSV LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210816 AAACT21228NWTL5HH5 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210802 20210802 AAACT2121489DWJJX4 LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210802 AAACT212144SR7SS0P LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT2121441445.76\B0220210802 AAACT212144SR7SRH0 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21214VG2J0\B02      20210802 AAACT21214476R7491 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210802 AAACT21214476R7490 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT2121441445.76\B0220210802 AAACT21214476R742L LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210802 AAACT21214476R73Z9 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210802 AAACT21214476R73NM LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210722 20210723 AAACT212041PL242RY LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210723 AAACT21204KR8850R6 ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20210723 AAACT21204KR883M7X LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH      USER
+          20210722 AAACT21203SL0C2GFC ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20210722 AAACT21203SL0C25CM LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH      SCHEDULED*SOD
+ 20210721 20210721 AAACT21202N5MFCRFY ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20210721 AAACT21202FC6J61B7 LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20210721 AAACT21202FC6J6171 LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20210721 AAACT21202FC6J6170 ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20210721 AAACT21202FC6J613T CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20210721 AAACT21202BQ0RVDN7 LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20210721 AAACT21202BQ0RVD7C LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20210721 AAACT21202BQ0RVD7B ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20210721 AAACT21202BQ0RV8SZ CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20210719 20210721 AAACT21200YHBSN543 LENDING-CHANGE-ESCROWDRINT                          AUTH-REV  SCHEDULED*EOD
+          20210721 AAACT212001H58F6D7 LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT212001H58F5YS\B02                                                                                                                                                  1413.35
+          20210721 AAACT212001H58F5YS LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT21200S9CJC\B02                                                                                                                                                        0
+          20210719 AAACT212006SGQ79K3 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210719 AAACT212006SGQ79K2 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT212006SGQ79BM\B02                                                                                                                                                  1413.35
+          20210719 AAACT212006SGQ79BM LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210719 AAACT212006SGQ797C LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210719 AAACT212006SGQ78XP LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210705 20210705 AAACT211867QVBK9F8 LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20210705 AAACT211864RYHCC15 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT211864RYHCBLZ\B02                                                                                                                                                  1413.35
+          20210705 AAACT211864RYHCBLZ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21186MVXS6\B02                                                                                                                                                        0
+          20210705 AAACT21186T9PT9N57 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210705 AAACT21186T9PT9N56 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21186T9PT9MYT\B02                                                                                                                                                  1413.35
+          20210705 AAACT21186T9PT9MYT LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210705 AAACT21186T9PT9MVJ LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210705 AAACT21186T9PT9MN2 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210621 20210621 AAACT21172RT6H2SCL LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21172RT6H2RYK\B02                                                                                                                                                  1413.35
+          20210621 AAACT21172RT6H2RYK LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT211721HD8Q\B02                                                                                                                                                        0
+          20210621 AAACT21172PP93JJFF LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210621 AAACT21172PP93JJFD LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21172PP93JJB5\B02                                                                                                                                                  1413.35
+          20210621 AAACT21172PP93JJB5 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210621 AAACT21172PP93JJ6X LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210621 AAACT21172PP93JHX7 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210607 20210607 AAACT211584GWFV4NM LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT211584GWFV47G\B02                                                                                                                                                  1413.35
+          20210607 AAACT211584GWFV47G LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21158V69J7\B02                                                                                                                                                        0
+          20210607 AAACT211582XN4QZX7 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210607 AAACT211582XN4QZX6 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT211582XN4QZLK\B02                                                                                                                                                  1413.35
+          20210607 AAACT211582XN4QZLK LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210607 AAACT211582XN4QZH9 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210607 AAACT211582XN4QZ8V LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210604 20210604 AAACT211553PY72C7Z LENDING-CHANGE-ALTRANSFERSFEE                       AUTH      USER
+ 20210531 20210531 AAACT211513TZJ4TTZ LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT211513TZJ4T99\B02                                                                                                                                                  1413.35
+          20210531 AAACT211513TZJ4T99 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21151BSWRV\B02                                                                                                                                                        0
+ 20210527 20210527 AAACT21147TS56QX30 ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20210527 AAACT2114734SLXGW3 LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20210527 AAACT2114734SLXGW2 LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20210527 AAACT2114734SLXGRV CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20210527 AAACT21147BGSV3YC3 LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20210527 AAACT21147BGSV3Y7W LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20210527 AAACT21147C8F1KNLT CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20210524 20210527 AAACT2114405RHRVM1 LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT2114405RHRV2V\B02                                                                                                                                                  1413.35
+          20210527 AAACT2114405RHRV2V LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT21144FD283\B02                                                                                                                                                        0
+          20210524 AAACT21144T3JWRNQ6 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210524 AAACT21144T3JWRNQ5 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21144T3JWRNHQ\B02                                                                                                                                                  1413.35
+          20210524 AAACT21144T3JWRNHQ LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210524 AAACT21144T3JWRNDG LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210524 AAACT21144T3JWRN60 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210514 20210514 AAACT2113406307G19 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT2113406307DZP\B02                                                                                                                                                  1413.35
+          20210514 AAACT2113406307DZP LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21134J8T8B\B02                                                                                                                                                        0
+ 20210512 20210512 AAACT211324FM35NJ3 ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20210512 AAACT21132MYK0L3CG LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20210512 AAACT21132MYK0L3CF LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20210512 AAACT21132MYK0L386 CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20210512 AAACT211324FM2RFQS LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20210512 AAACT211324FM2RFMK LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20210512 AAACT21132XQCD7GF6 CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20210510 20210512 AAACT21130LM35CGKT LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT21130LM35CG8J\B02                                                                                                                                                  1413.35
+          20210512 AAACT21130LM35CG8J LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT21130M9L76\B02                                                                                                                                                        0
+          20210510 AAACT21130FR15PD6C LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210510 AAACT21130FR15PD6B LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21130FR15PCZW\B02                                                                                                                                                  1413.35
+          20210510 AAACT21130FR15PCZW LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210510 AAACT21130FR15PCWM LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210510 AAACT21130FR15PCP5 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210426 20210426 AAACT211162SKLMQ9J LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT211162SKLMPRV\B02                                                                                                                                                  1413.35
+          20210426 AAACT211162SKLMPRV LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21116R6TQZ\B02                                                                                                                                                        0
+          20210426 AAACT211166W4YQDDZ LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210426 AAACT211166W4YQDDY LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT211166W4YQD6H\B02                                                                                                                                                  1413.35
+          20210426 AAACT211166W4YQD6H LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210426 AAACT211166W4YQD00 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210426 AAACT211166W4YQCSK LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210414 20210414 AAACT21104V1GYNJFG ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20210414 AAACT211045GZHW7LS LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20210414 AAACT211045GZHW7HK LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20210414 AAACT211045GZHW793 CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20210414 AAACT2110448C6RM5H LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20210414 AAACT2110448C6RM5G LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20210414 AAACT21104H8RTXFS7 CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20210412 20210414 AAACT21102BW0R3085 LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT21102BW0R2ZMN\B02                                                                                                                                                  1413.35
+          20210414 AAACT21102BW0R2ZMN LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT21102JLKZ1\B02                                                                                                                                                        0
+          20210412 AAACT21102KK1B6KXV LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210412 AAACT21102KK1B6KXT LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21102KK1B6KQB\B02                                                                                                                                                  1413.35
+          20210412 AAACT21102KK1B6KQB LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210412 AAACT21102KK1B6KHW LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210412 AAACT21102KK1B6K9F LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210329 20210329 AAACT21088QR9PJP5G LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21088QR9PJNR6\B02                                                                                                                                                  1413.35
+          20210329 AAACT21088QR9PJNR6 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21088QL44B\B02                                                                                                                                                        0
+          20210329 AAACT210880179DWM6 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210329 AAACT210880179DWM5 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT210880179DWHY\B02                                                                                                                                                  1413.35
+          20210329 AAACT210880179DWHY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210329 AAACT210880179DWDP LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210329 AAACT210880179DW9G LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210315 20210315 AAACT210747JV4HL24 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT210747JV4HKR3\B02                                                                                                                                                  1413.35
+          20210315 AAACT210747JV4HKR3 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT210747WYK3\B02                                                                                                                                                        0
+          20210315 AAACT21074YQHKWZTJ LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210315 AAACT21074YQHKWZTH LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21074YQHKWZM4\B02                                                                                                                                                  1413.35
+          20210315 AAACT21074YQHKWZM4 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210315 AAACT21074YQHKWZM1 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210315 AAACT21074YQHKWZDL LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210301 20210301 AAACT21060MJ1N0Q32 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21060MJ1N0PRZ\B02                                                                                                                                                  1413.35
+          20210301 AAACT21060MJ1N0PRZ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT2106009YJ3\B02                                                                                                                                                        0
+          20210301 AAACT21060YXR2KFL2 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210301 AAACT21060YXR2KFL1 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21060YXR2KFGT\B02                                                                                                                                                  1413.35
+          20210301 AAACT21060YXR2KFGT LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210301 AAACT21060YXR2KFCK LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210301 AAACT21060YXR2KF8B LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210215 20210215 AAACT21046XG54KWS1 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21046XG54KWFR\B02                                                                                                                                                  1413.35
+          20210215 AAACT21046XG54KWFR LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21046Q8L5H\B02                                                                                                                                                        0
+          20210215 AAACT21046278NC4W3 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210215 AAACT21046278NC4W2 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21046278NC4RV\B02                                                                                                                                                  1413.35
+          20210215 AAACT21046278NC4RV LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210215 AAACT21046278NC4NL LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210215 AAACT21046278NC4G4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210201 20210201 AAACT21032700M4Q0Q LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21032700M4PPX\B02                                                                                                                                                  1413.35
+          20210201 AAACT21032700M4PPX LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT21032518P4\B02                                                                                                                                                        0
+          20210201 AAACT2103267YLY3Q8 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210201 AAACT2103267YLY3Q7 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT2103267YLY3M0\B02                                                                                                                                                  1413.35
+          20210201 AAACT2103267YLY3M0 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210201 AAACT2103267YLY3HR LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210201 AAACT2103267YLY3DJ LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210120 20210120 AAACT21020LCNV2LPK ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20210120 AAACT21020CL13D3VX LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20210120 AAACT21020CL13D3VW LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20210120 AAACT21020CL13D3VV CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20210120 AAACT210204PX6DX38 LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20210120 AAACT210204PX6DX01 LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20210120 AAACT210200BB3GNXK CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20210118 20210120 AAACT2101803V5VLG5 LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT2101803V5VKXJ\B02                                                                                                                                                  1413.35
+          20210120 AAACT2101803V5VKXJ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT21018GBXDC\B02                                                                                                                                                        0
+          20210118 AAACT2101844V95G3K LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20210118 AAACT2101844V95G3J LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT2101844V95G0B\B02                                                                                                                                                  1413.35
+          20210118 AAACT2101844V95G0B LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210118 AAACT2101844V95FX1 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210118 AAACT2101844V95FST LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20210104 20210106 AAACT21006YHLTMZ22 LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21006YHLTMYVM\B02                                                                                                                                                  1410.77
+          20210106 AAACT21006YHLTMYVM LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT210048X566\B02                                                                                                                                                        0
+          20210106 AAACT21006YHLTMYN5 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21006YHLTMYK2\B02                                                                                                                                                  1413.35
+          20210106 AAACT21006YHLTMYK2 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMYK0 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMYJY LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20210106 AAACT21004GN8TLMFC LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT21004GN8TLLZW\B02                                                                                                                                                  1410.77
+          20210106 AAACT21004GN8TLLZW LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT210048X566\B02                                                                                                                                                        0
+ 20201221 20210106 AAACT21006YHLTMYFQ LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21006YHLTMYBH\B02                                                                                                                                                  1410.77
+          20210106 AAACT21006YHLTMYBH LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT20356TR3KP\B02                                                                                                                                                        0
+          20210106 AAACT21006YHLTMY78 LENDING-SETTLE-PR.REPAYMENT                         AUTH      SECONDARY                                    AAACT21006YHLTMY43\B02                                                                                                                                                  1413.35
+          20210106 AAACT21006YHLTMY43 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMY41 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMY0V LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20210106 AAACT20356XW8V5DHR LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT20356XW8V5D8J\B02                                                                                                                                                  1410.77
+          20210106 AAACT20356XW8V5D8J LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20356TR3KP\B02                                                                                                                                                        0
+ 20201209 20210106 AAACT21006YHLTMY0T LENDING-RESUME-ARRANGEMENT                          AUTH      SECONDARY
+          20210106 AAACT21006YHLTMXTD LENDING-UPDATE-NPL*AUTO                             AUTH      SECONDARY
+          20210106 AAACT21006YHLTMXTC LENDING-CREDIT-ARRANGEMENT                          AUTH      SECONDARY                                    AAACT21006YHLTMXM5\B02                                                                                                                                                  19732.72
+          20210106 AAACT21006YHLTMXM5 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT20344DYLDQ\B02                                                                                                                                                        11311.96
+          20210106 AAACT21006YHLTMXLY LENDING-ADJUST.SUSP.BALANCE-BALANCE.MAINTENANCE     AUTH      USER
+          20210106 AAACT21006YHLTMXHP LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20210106 AAACT20344RD284N75 LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT20344RD284MLW\B02                                                                                                                                                  31044.68
+          20210106 AAACT20344RD284MLW LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20344DYLDQ\B02                                                                                                                                                        0
+          20210106 AAACT2034442CVJYPG LENDING-ADJUST.SUSP.BALANCE-BALANCE.MAINTENANCE     AUTH-REV  USER
+
+ 20201208 20210106 AAACT21006YHLTMXDG LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201207 20210106 AAACT21006YHLTMX97 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT2034222DJ1410.77    20210106 AAACT21006YHLTMX64 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMX62 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMX60 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20210106 AAACT20342XSNCTYSW LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT20342X1410.77\B0220210106 AAACT20342XSNCTYKV LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2034222DJ0\20201129 20210106 AAACT21006YHLTMX2T LENDING-AGE-OVERDUE*D90*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201127 20210106 AAACT21006YHLTMWZL LENDING-AGE-OVERDUE*D60*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201125 20210106 AAACT21006YHLTMWWB LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT2033060SW1410.77    20210106 AAACT21006YHLTMWS3 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20210106 AAACT20330BGJHYY0P LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT20330B1410.77\B0220210106 AAACT20330BGJHYXPW LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2033060SW0\20201124 20210106 AAACT21006YHLTMWNY LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201123 20210106 AAACT21006YHLTMWNX LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMWKR LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMWKQ LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20201117 20210106 AAACT21006YHLTMWKN LENDING-CHANGE-ALTRANSFERSFEE                       AUTH      USER
+          20210106 AAACT20323GX8K399F LENDING-CHANGE-ALTRANSFERSFEE                       AUTH-REV  USER
+ 20201115 20210106 AAACT21006YHLTMWGF LENDING-AGE-OVERDUE*D90*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201114 20210106 AAACT21006YHLTMWC7 LENDING-CHANGE-ALTRANSFERSFEE                       AUTH      USER
+          20210106 AAACT21006YHLTMWC6 LENDING-CHANGE-ALCOPYAMRTSCHFE                      AUTH      USER
+          20210106 AAACT21006YHLTMW80 LENDING-CHANGE-ALCOPYOFDOCFEE                       AUTH      USER
+          20210106 AAACT21006YHLTMW7Z LENDING-CHANGE-ALINFOSTMTFEE                        AUTH      USER
+          20210106 AAACT21006YHLTMW4R LENDING-CHANGE-ALPROFSSIONALFE                      AUTH      USER
+          20210106 AAACT21006YHLTMW1L LENDING-CHANGE-ALDISCHARGE                          AUTH      USER
+          20210106 AAACT2031976NRWCYJ LENDING-CHANGE-ALTRANSFERSFEE                       AUTH-REV  USER
+          20210106 AAACT20319PM57MSS0 LENDING-CHANGE-ALCOPYAMRTSCHFE                      AUTH-REV  USER
+          20210106 AAACT203191YXVMZCV LENDING-CHANGE-ALCOPYOFDOCFEE                       AUTH-REV  USER
+          20210106 AAACT20319M8HZHGBN LENDING-CHANGE-ALINFOSTMTFEE                        AUTH-REV  USER
+          20210106 AAACT203193TVKNBQN LENDING-CHANGE-ALPROFSSIONALFE                      AUTH-REV  USER
+          20210106 AAACT203193JC4FTB9 LENDING-CHANGE-ALDISCHARGE                          AUTH-REV  USER
+ 20201113 20210106 AAACT21006YHLTMW1J LENDING-AGE-OVERDUE*D60*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201111 20210106 AAACT21006YHLTMVYC LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201110 20210106 AAACT21006YHLTMVY9 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20201114 AAACT203154J713ZNL LENDING-CREDIT-ARRANGEMENT                          AUTH-REV  SECONDARY                                    AAACT2031541410.77\B0220201114 AAACT203154J713Z7Q LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT203153VQR0\20201109 20210106 AAACT21006YHLTMVV5 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMVV3 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMVV2 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20201102 20210106 AAACT21006YHLTMVQV LENDING-UPDATE-ACTIVITY.CHARGES                     AUTH      USER
+          20210106 AAACT20319J7Y16S4X LENDING-UPDATE-ACTIVITY.CHARGES                     AUTH-REV  USER
+ 20201101 20210106 AAACT21006YHLTMVMM LENDING-SUSPEND-ARRANGEMENT                         AUTH      SECONDARY
+          20210106 AAACT21006YHLTMVJH LENDING-UPDATE-NPL*AUTO                             AUTH      SECONDARY
+          20210106 AAACT21006YHLTMVJD LENDING-AGE-OVERDUE*D90*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201030 20210106 AAACT21006YHLTMVF7 LENDING-AGE-OVERDUE*D60*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201028 20210106 AAACT21006YHLTMVF5 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201027 20210106 AAACT21006YHLTMV9Y LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201026 20210106 AAACT21006YHLTMV6Q LENDING-RESUME-ARRANGEMENT                          AUTH      SECONDARY
+          20210106 AAACT21006YHLTMV3H LENDING-UPDATE-NPL*AUTO                             AUTH      SECONDARY
+          20210106 AAACT21006YHLTMV08 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT20300K9TPD\B02                                                                                                                                                        1410.77
+          20210106 AAACT21006YHLTMTX5 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMTX3 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMTX1 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20210106 AAACT20300SX1THF4K LENDING-RESUME-ARRANGEMENT                          AUTH-REV  SECONDARY
+          20210106 AAACT20300SX1THF1Q LENDING-UPDATE-NPL*AUTO                             AUTH-REV  SECONDARY
+          20210106 AAACT20300SX1THDM7 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20300K9TPD\B02                                                                                                                                                        1410.77
+ 20201022 20210106 AAACT21006YHLTMTPN LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT20296HJPW4\B02                                                                                                                                                        1410.77
+          20210106 AAACT20296KTSCZPBD LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20296HJPW4\B02                                                                                                                                                        1410.77
+ 20201016 20210106 AAACT21006YHLTMTPL LENDING-AGE-OVERDUE*D60*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201014 20210106 AAACT21006YHLTMTLC LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201013 20210106 AAACT21006YHLTMTH7 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20201012 20210106 AAACT21006YHLTMTH6 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMTH4 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMTCZ LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20201002 20210106 AAACT21006YHLTMTCX LENDING-AGE-OVERDUE*D60*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20200930 20210106 AAACT21006YHLTMT8R LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20200929 20210106 AAACT21006YHLTMT8P LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20200928 20210106 AAACT21006YHLTMT5L LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMT5J LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMT5G LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20200916 20210106 AAACT21006YHLTMT28 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20200915 20210106 AAACT21006YHLTMT27 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20200914 20210106 AAACT21006YHLTMSZ3 LENDING-UPDATE-NPL*AUTO                             AUTH      USER
+          20210106 AAACT21006YHLTMSZ2 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSZ0 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSVV LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20210106 AAACT20266LD7RP6V7 LENDING-UPDATE-NPL*AUTO                             AUTH-REV  USER
+          20200914 AAACT202586X048J2K LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT202585J9ZQ\B02                                                                                                                                                        1413.35
+          20200914 AAACT202586X048HZ9 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048HW3 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048HW2 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202582P4MJ9PM LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT202585J9ZQ\B02                                                                                                                                                        1413.35
+          20200914 AAACT202584QGMFNMX LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT202584QGMFNFH LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202584QGMFNB7 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202584QGMFN3S LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200902 20210106 AAACT21006YHLTMSVS LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048HRX ADHOC-COB-DISCLOSURE                                AUTH-REV  USER
+          20200914 AAACT20246745L6NQP ADHOC-COB-DISCLOSURE                                AUTH-REV  USER
+ 20200901 20210106 AAACT21006YHLTMSRN LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048HRV LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2024638VDYHW9 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200831 20210106 AAACT21006YHLTMSRM LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSRK LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSND LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048HNM LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048HKG LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048HKF LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200902 AAACT20244JG7XBK6F LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20244Z1DY9\B02                                                                                                                                                        1413.35
+          20200831 AAACT20244T1Y0B96N LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20244T1Y0B8X0 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20244T1Y0B8SR LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20244T1Y0B8L9 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200824 20200914 AAACT202586X048H7R LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20237YLQVG\B02                                                                                                                                                        1410.77
+          20200914 AAACT202377KHTR8T1 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20237YLQVG\B02                                                                                                                                                        1410.77
+ 20200818 20210106 AAACT21006YHLTMSNB LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048H4K LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202314F8VQF4Z LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200817 20210106 AAACT21006YHLTMSK7 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSK5 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSK3 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048GTV LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20230JN7XN\B02                                                                                                                                                        1413.35
+          20200914 AAACT202586X048GQN LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048GQL LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048GMF LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20230BX29RZMN LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20230JN7XN\B02                                                                                                                                                        1413.35
+          20200817 AAACT202303XSYQQ0R LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT202303XSYQPXJ LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202303XSYQPT8 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202303XSYQPQ1 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200804 20210106 AAACT21006YHLTMSFZ LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048GMC LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202171MH789WS LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200803 20210106 AAACT21006YHLTMSFY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSFW LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20210106 AAACT21006YHLTMSBR LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20200914 AAACT202586X048G6H LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT202165CQL6\B02                                                                                                                                                        1413.35
+          20200914 AAACT202586X048G39 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048G37 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048G02 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20216QK7KD7WD LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT202165CQL6\B02                                                                                                                                                        1413.35
+          20200803 AAACT202167LV43D4W LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT202167LV43CYG LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202167LV43CV5 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202167LV43CQY LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200722 20210106 AAACT21006YHLTMRXR ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20210106 AAACT21006C6DBMPWW LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH      USER
+          20200914 AAACT202586X048G01 ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20200914 AAACT202586X048BW8 LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH-REV  USER
+          20200914 AAACT202586X048BW7 ADHOC-COB-DISCLOSURE                                AUTH-REV  USER
+          20200914 AAACT202586X048BS1 ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20200914 AAACT202586X048744 LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20206RBDFC2ND ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20200914 AAACT202060KMZT9CS LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH-REV  USER
+          20200914 AAACT202043T0PHVGM ADHOC-COB-DISCLOSURE                                AUTH-REV  USER
+          20200914 AAACT2020413DHSXFT ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20200914 AAACT2020413DHSTYC LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH-REV  SCHEDULED*SOD
+          20200722 AAACT202041GS3WZRW ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20200722 AAACT202041GS3WV5Y LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH-REV  SCHEDULED*SOD
+ 20200721 20200914 AAACT202586X04870W LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2020413DHSTQY LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200720 20200914 AAACT202586X0486TF LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0486Q6 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0486M1 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200722 AAACT20202LS8WQN5N LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20202KSL35\B02                                                                                                                                                        1410.77
+          20200720 AAACT20202TG5Z8M72 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20202TG5Z8LXG LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20202TG5Z8LT5 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20202TG5Z8LPY LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200706 20200914 AAACT202586X048663 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2018862KRB\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0485ZP LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0485ZM LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0485WF LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2018882TNYHQN LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2018862KRB\B02                                                                                                                                                        1410.77
+          20200706 AAACT20188TP8NLJQ1 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20188TP8NLJLW LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20188TP8NLJLS LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20188TP8NLJDB LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200622 20200914 AAACT202586X0485GJ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201749SFQK\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0485C9 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048581 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04854W LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20174PD9LJ11D LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201749SFQK\B02                                                                                                                                                        1410.77
+          20200622 AAACT201741M84T12M LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT201741M84T0W6 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201741M84T0NQ LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201741M84T0G8 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200615 20200914 AAACT202586X0484V4 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2016772YQ2\B02                                                                                                                                                        1410.77
+          20200914 AAACT20167BFMY6FN1 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2016772YQ2\B02                                                                                                                                                        1410.77
+ 20200609 20200914 AAACT202586X0484MR LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20161ZZSYRS1M LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200608 20200914 AAACT202586X0484B0 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20160JN4L5\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X04843M LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04843K LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04840C LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20160MSF7LPFH LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20160JN4L5\B02                                                                                                                                                        1410.77
+          20200608 AAACT20160VHB29BJR LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20160VHB29BFJ LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20160VHB29BB8 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20160VHB29B3T LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200526 20200914 AAACT202586X0483X3 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2014755RYDXYL LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200525 20200914 AAACT202586X0483H7 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201462PCL5\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0483D0 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04838T LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04838S LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20146744WGFST LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201462PCL5\B02                                                                                                                                                        1410.77
+          20200525 AAACT20146BRHPN6NJ LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20146BRHPN6K9 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20146BRHPN6G1 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20146BRHPN6BT LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200512 20200914 AAACT202586X04835K LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2013339Q13S1W LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200511 20200914 AAACT202586X0482VW LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201326DW58\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0482RM LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0482NF LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0482ND LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20132MXP69TTB LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT201326DW58\B02                                                                                                                                                        1410.77
+          20200511 AAACT201325D9K9W2Y LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT201325D9K9VZR LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201325D9K9VWH LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201325D9K9VS8 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200428 20200914 AAACT202586X0482K6 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201192JSF8DXJ LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200427 20200914 AAACT202586X048249 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20118S0GTN\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X048213 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X048211 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0481XV LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2011842C5M3XB LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20118S0GTN\B02                                                                                                                                                        1410.77
+          20200427 AAACT20118JPR9CJQ2 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20118JPR9CJHP LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20118JPR9CJDD LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20118JPR9CJ5Y LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200414 20200914 AAACT202586X0481TN LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201050DNCX6JV LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200413 20200914 AAACT202586X0481HY LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20104KKPX3\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0481DR LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0481DP LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04819H LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT201043Z93X3WB LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20104KKPX3\B02                                                                                                                                                        1410.77
+          20200413 AAACT20104K53LVDPY LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20104K53LVDLR LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20104K53LVDHG LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20104K53LVD90 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200331 20200914 AAACT202586X048169 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200911HD5Q5CB LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200330 20200914 AAACT202586X0480WL LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20090FCMSB\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X0480SD LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0480SB LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X0480P4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20090MHZGK22T LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20090FCMSB\B02                                                                                                                                                        1410.77
+          20200330 AAACT200905LMFGBGW LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT200905LMFGBCP LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200905LMFGB8F LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200905LMFGB56 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200317 20200914 AAACT202586X0480KY LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20077BLV855PW LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200316 20200914 AAACT202586X048050 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20076P29MJ\B02                                                                                                                                                        1410.77
+          20200914 AAACT202586X04801T LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X04801R LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT202586X047ZYK LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20076V2JSLS47 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20076P29MJ\B02                                                                                                                                                        1410.77
+          20200316 AAACT200762M8X0HDJ LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT200762M8X0H99 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200762M8X0H61 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200762M8X0GZL LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200303 20200914 AAACT202586X047ZVB LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20063VSYTYXR6 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200302 20200914 AAACT202586X047MLX LENDING-UPDATE-NPL*AUTO                             AUTH-REV  USER
+          20200914 AAACT20062YJ9J7KJP LENDING-RESUME-ARRANGEMENT                          AUTH-REV  SECONDARY
+          20200914 AAACT20062YJ9J7K6Z LENDING-UPDATE-NPL*AUTO                             AUTH-REV  USER
+          20200914 AAACT20062S8R1YVSY LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20062TNPHQ\B02                                                                                                                                                        1410.77
+          20200302 AAACT200620L3QRK1V LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT200620L3QRJYL LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200620L3QRJVC LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200620L3QRJR4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200224 20200914 AAACT20055S4633D7P LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20055QX6T3\B02                                                                                                                                                        1410.77
+ 20200218 20200914 AAACT20049GQ8QD4P7 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200217 20200914 AAACT20048QMLKZM87 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20048B5242\B02                                                                                                                                                        1410.77
+          20200217 AAACT2004823502BZK LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT2004823502BS5 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2004823502BNW LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT2004823502BGF LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200204 20200914 AAACT2003517W1BQ47 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200203 20200914 AAACT20034X2J59C3W LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20034C7MB0\B02                                                                                                                                                        1410.77
+          20200203 AAACT20034HQ6W2KGW LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20034HQ6W2K8J LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20034HQ6W2K8F LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20034HQ6W2K56 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200121 20200914 AAACT2002118W34M7N LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200120 20200914 AAACT20020BFBBX13J LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT20020D38ZG\B02                                                                                                                                                        1410.77
+          20200120 AAACT200204QBYDCP1 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT200204QBYDCKW LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200204QBYDCKS LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT200204QBYDCCB LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20200107 20200914 AAACT20007L86039YW LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20200106 20200914 AAACT200062NGFTSZ8 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT2000684YQX\B02                                                                                                                                                        1410.77
+          20200106 AAACT20006ZP6CZBDP LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT20006ZP6CZB67 LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20006ZP6CZB2Z LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT20006ZP6CZ9ZR LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20191224 20200914 AAACT19358BDZ2DLSD LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20191223 20200914 AAACT193570MRYF7PM LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT19357LRN4Q\B02                                                                                                                                                        1410.77
+          20191223 AAACT1935722R95C98 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20200914 AAACT1935722R95BZM LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT1935722R95BWC LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH-REV  SCHEDULED*SOD
+          20200914 AAACT1935722R95BS4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20191218 20191218 AAACT19352059CBGRY LENDING-SUSPEND-ARRANGEMENT                         AUTH      SECONDARY
+          20191218 AAACT19352059CBGKH LENDING-UPDATE-NPL*AUTO                             AUTH      USER
+ 20191210 20191210 AAACT19344NRT6CN9J LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20191209 20191209 AAACT19343NHR42MPJ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT1934369R4R\B02                                                                                                                                                        1410.77
+          20191209 AAACT19343V9TK2KNG LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20191209 AAACT19343V9TK2KG3 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20191209 AAACT19343V9TK2KG0 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20191209 AAACT19343V9TK2K4B LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20191126 20191126 AAACT19330050MQ4S6 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20191125 20191125 AAACT193299VDV1RKJ LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT193295N8Y9\B02                                                                                                                                                        1410.77
+          20191125 AAACT1932908HWTSNN LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20191125 AAACT1932908HWTSG8 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20191125 AAACT1932908HWTSBZ LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20191125 AAACT1932908HWTS7R LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20191112 20191112 AAACT19316S2ZYP2MF LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20191111 20191111 AAACT1931524T41VYP LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19315Q8TKM\B02                                                                                                                                                        1410.77
+          20191111 AAACT19315457XHRG5 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20191111 AAACT19315457XHRBY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20191111 AAACT19315457XHR7P LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20191111 AAACT19315457XHR4G LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20191101 20191101 AAACT19305FGQ2J1NT LENDING-UPDATE-SETTLEMENT                           AUTH      USER
+ 20191029 20191029 AAACT19302565DG3HZ LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20191028 20191028 AAACT1930151GZT7VD LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19301KC0QV\B02                                                                                                                                                        1410.77
+          20191028 AAACT19301KFZSK89F LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20191028 AAACT19301KFZSK82Y LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20191028 AAACT19301KFZSK7ZQ LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20191015 20191015 AAACT19288G1F7MSPC LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20191014 20191014 AAACT192870PLCDDXK LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20191014 AAACT192870PLCDDLW LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20191014 AAACT192870PLCDD96 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20191008 20191008 AAACT192816MWGPZLT ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20191008 AAACT19281SM1CSFNP LENDING-UPDATE-CUSTOMER                             AUTH      USER
+ 20191001 20191001 AAACT19274NJCVNB1J LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20190930 20190930 AAACT19273SD3V92YT LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190930 AAACT19273SD3V92VL LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190930 AAACT19273SD3V92RC LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190924 20190924 AAACT19267H9FLL50R LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19267120XN\B02                                                                                                                                                        5643.08
+ 20190918 20190920 AAACT192633H3VHK6S LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT19261R112VWZZ LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190917 20190920 AAACT192633H3VHK3M LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT192606JZKFS3C LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190916 20190920 AAACT192633H3VHK0H LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190920 AAACT192633H3VHJX7 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20190920 AAACT192591557759N LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20190920 AAACT1925915577536 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20190904 20190920 AAACT192633H3VHJX3 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT192479W7T2KR0 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190903 20190920 AAACT192633H3VHJSW LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT19246WQWRYT6C LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190902 20190920 AAACT192633H3VHJQ4 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190920 AAACT192633H3VHJPP LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20190920 AAACT1924508FYQBSS LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20190920 AAACT1924508FYQBPK LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20190831 20190920 AAACT19243WFLX9LYX ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20190920 AAACT19243WFLX9HYF LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH-REV  SCHEDULED*EOD
+ 20190829 20190920 AAACT192633H3VHJH8 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19241Z9G62\B02                                                                                                                                                        1052.04
+          20190920 AAACT19241Y5L1X89R LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT19241Z9G62\B02                                                                                                                                                        1052.04
+ 20190821 20190920 AAACT192633H3VHJH6 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT1923370RCNJ3Z LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190820 20190920 AAACT192633H3VHJCZ LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT192324LZTWBHC LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190819 20190920 AAACT192633H3VHJ8V LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190920 AAACT192633H3VHJ8S LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20190920 AAACT19231JSX5QLKN LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20190920 AAACT19231JSX5QLGF LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20190812 20190920 AAACT192633H3VHJ5J LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19224ZL7QQ\B02                                                                                                                                                        1052.04
+          20190920 AAACT19224HZP87541 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT19224ZL7QQ\B02                                                                                                                                                        1052.04
+ 20190807 20190920 AAACT192633H3VHJ29 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT19219R4ZMLBC5 LENDING-AGE-OVERDUE*D30*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190806 20190920 AAACT192633H3VHHZ3 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT192184TNLRL38 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190805 20190920 AAACT192633H3VHHZ2 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190920 AAACT192633H3VHHVW LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+          20190920 AAACT19217LDSTSRXV LENDING-MAKEDUE-SCHEDULE                            AUTH-REV  SCHEDULED*SOD
+          20190920 AAACT19217LDSTSRTM LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH-REV  SCHEDULED*SOD
+ 20190731 20190920 AAACT1921210W7RW78 ADHOC-COB-DISCLOSURE                                AUTH-REV  SECONDARY
+          20190920 AAACT1921210W7RSV4 LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH-REV  SCHEDULED*EOD
+ 20190723 20190920 AAACT192633H3VHHRP LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+          20190920 AAACT192040MNDJFG6 LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH-REV  SCHEDULED*SOD
+ 20190722 20190920 AAACT192633H3VHHRN ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190920 AAACT19263Y37SWGX1 LENDING-CHANGE.PRODUCT-ARRANGEMENT                  AUTH      USER
+          20190722 AAACT19203XHPCMWDW LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190722 AAACT19203XHPCMW9N LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190721 20190721 AAACT19202GWCDL5J7 LENDING-MANUAL-RENEWAL                              AUTH      USER
+ 20190709 20190709 AAACT19190QB2WT7LM LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20190708 20190708 AAACT19189WDL0JVH7 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19189P83FX\B02                                                                                                                                                        1052.04
+          20190708 AAACT19189RJTCCSD8 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190708 AAACT19189RJTCCS5V LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190708 AAACT19189RJTCCS2L LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190708 AAACT19189RJTCCRW4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190630 20190630 AAACT19181WTQXCWR7 ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190630 AAACT19181WTQXCV92 LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190625 20190625 AAACT191769NDNG7KP LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20190624 20190624 AAACT191756G15Z844 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19175S1Q8V\B02                                                                                                                                                        1052.04
+          20190624 AAACT19175BJDJCPL7 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190624 AAACT19175BJDJCPH2 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190624 AAACT19175BJDJCPGZ LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190624 AAACT19175BJDJCPCR LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190612 20190612 AAACT19163BR2C2R3M ADHOC-COB-DISCLOSURE                                AUTH      USER
+          20190612 AAACT1916349X52VLX LENDING-CAPITALISE-ALNSFFEE                         AUTH      SECONDARY
+          20190612 AAACT1916349X52VLW LENDING-ISSUEBILL-ALNSFFEE                          AUTH      SECONDARY
+          20190612 AAACT1916349X52VHP CHANGE.ALNSFFEE.CAP                                 AUTH      USER
+          20190612 AAACT19163KS93DTBP LENDING-CAPITALISE-ALNSFFEE                         AUTH-REV  SECONDARY
+          20190612 AAACT19163KS93DTBN LENDING-ISSUEBILL-ALNSFFEE                          AUTH-REV  SECONDARY
+          20190612 AAACT191633T7ZTJ8L CHANGE.ALNSFFEE.CAP                                 AUTH-REV  USER
+ 20190611 20190612 AAACT1916349X52VHN LENDING-AGE-OVERDUE*DEL*INSTALLMENT                 AUTH      SCHEDULED*SOD
+ 20190610 20190612 AAACT1916101BNKRMB LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH-REV  TRANSACTION                                  FT19161Q1N4L\B02                                                                                                                                                        1052.04
+          20190610 AAACT1916146K1R52R LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190610 AAACT1916146K1R4ZJ LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190610 AAACT1916146K1R4W8 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190610 AAACT1916146K1R4S1 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190531 20190531 AAACT19151RLM6XGDN ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190531 AAACT19151RLM6XF1R LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190527 20190527 AAACT19147WM460LZ7 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19147FNPQK\B02                                                                                                                                                        1052.04
+          20190527 AAACT191472BWBRSYT LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190527 AAACT191472BWBRSVM LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190527 AAACT191472BWBRSRC LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190527 AAACT191472BWBRSN4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190513 20190513 AAACT1913391MY5HLH LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19133Y320Z\B02                                                                                                                                                        1052.04
+          20190513 AAACT19133JKYS3VJB LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190513 AAACT19133JKYS3VF3 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190513 AAACT19133JKYS3V9V LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190513 AAACT19133JKYS3V6M LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190430 20190430 AAACT191202K50YVXD ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190430 AAACT191202K50YTC0 LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190429 20190429 AAACT19119BMVMLMK3 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT191195V6P3\B02                                                                                                                                                        1052.04
+          20190429 AAACT19119Y14GFJ7V LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190429 AAACT19119Y14GFJ4N LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190429 AAACT19119Y14GFJ1D LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190429 AAACT19119Y14GFHY5 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190415 20190415 AAACT19105JQXDDNGN LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19105XSH79\B02                                                                                                                                                        1052.04
+          20190415 AAACT191056XZWBH1F LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190415 AAACT191056XZWBGV1 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190415 AAACT191056XZWBGQS LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190415 AAACT191056XZWBGQR LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190401 20190401 AAACT19091D3CDYZNS LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19091P386Q\B02                                                                                                                                                        1052.04
+          20190401 AAACT190910J4JB760 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190401 AAACT190910J4JB6ZM LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190401 AAACT190910J4JB6WC LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190401 AAACT190910J4JB6WB LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190331 20190331 AAACT19090S7QV7H1L ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190331 AAACT19090S7QV7G3N LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190318 20190318 AAACT190775MJ46WR4 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT190772H61K\B02                                                                                                                                                        1052.04
+          20190318 AAACT19077R8NJ21DY LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190318 AAACT19077R8NJ219R LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190318 AAACT19077R8NJ216H LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190318 AAACT19077R8NJ216G LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190316 20190316 AAACT19075BLJ4X6NT LENDING-UPDATE-AL.COMMISSION                        AUTH      USER
+ 20190304 20190304 AAACT190632RT3Y3P5 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT190636K6ZL\B02                                                                                                                                                        1052.04
+          20190304 AAACT1906301G9LCV1 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190304 AAACT1906301G9LCMM LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190304 AAACT1906301G9LCJC LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190304 AAACT1906301G9LCF4 LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190228 20190228 AAACT190593BJQYNVG ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190228 AAACT190593BJQYMT6 LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190218 20190218 AAACT1904976H3BD8P LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT190492LMRP\B02                                                                                                                                                        1052.04
+          20190218 AAACT190493WTN54C4 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190218 AAACT190493WTN541H LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190218 AAACT190493WTN53QS LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190218 AAACT190493WTN53JB LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190209 20190209 AAACT1904077MN33BS ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190209 AAACT1904077MN32SY LENDING-RENEGOTIATE-ARRANGEMENT                     AUTH      USER
+          20190209 AAACT1904064G6MJPY ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190209 AAACT1904064G6MHVP LENDING-RENEGOTIATE-ARRANGEMENT                     AUTH      USER
+ 20190204 20190204 AAACT19035B113JNN0 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT190359MTHJ\B02                                                                                                                                                        1052.04
+          20190204 AAACT19035N6T2PY6D LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190204 AAACT19035N6T2PY37 LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190204 AAACT19035N6T2PY34 LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190204 AAACT19035N6T2PXZX LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190131 20190131 AAACT19031KQK3GKTH ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190131 AAACT19031KQK3GJZP LENDING-PERIODIC.RESET-PRINCIPALINT                 AUTH      SCHEDULED*EOD
+ 20190123 20190123 AAACT19023L0S5H8JS ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190123 AAACT1791501459138 LENDING-CHANGE-SCHEDULE                             AUTH      USER
+ 20190121 20190121 AAACT19021Q29490Z5 LENDING-APPLYPAYMENT-PR.REPAYMENT                   AUTH      TRANSACTION                                  FT19021D14RP\B02                                                                                                                                                        1052.09
+          20190121 AAACT19021RQYN6H05 LENDING-SETTLE-SETTLEMENT                           AUTH      TRANSACTION*SOD
+          20190121 AAACT19021RQYN6GWY LENDING-MAKEDUE-SCHEDULE                            AUTH      SCHEDULED*SOD
+          20190121 AAACT19021RQYN6GSQ LENDING-ISSUE.ORDER-ARRANGEMENT*BLENDED             AUTH      SCHEDULED*SOD
+          20190121 AAACT19021RQYN6GPH LENDING-ISSUEBILL-SCHEDULE*BLENDED                  AUTH      SCHEDULED*SOD
+ 20190120 20190120 AAACT19020TH8RCSKW ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190120 AAACT19020TH8RCR6Y LENDING-CHANGE-PRINCIPALINT                         AUTH      SCHEDULED*SOD
+          20190119 AAACT190199TW3HHWM LENDING-CHANGE-PRINCIPALINT                         AUTH      USER
+          20190119 AAACT190199TW3HG0M LENDING-CHANGE-PRINCIPALINT                         AUTH-REV  USER
+          20190119 AAACT1791501377490 LENDING-CHANGE-PRINCIPALINT                         AUTH-REV  USER
+ 20190108 20190119 AAACT190199TW3HHP5 LENDING-CHANGE-ESCROWDRINT                          AUTH      SCHEDULED*EOD
+          20190119 AAACT190199TW3HFLN ADHOC-COB-DISCLOSURE                                AUTH      SECONDARY
+          20190119 AAACT190199TW3HCTW LENDING-CHANGE-PRINCIPALINT                         AUTH      SCHEDULED*EOD
+          20190119 AAACT1791501377495 LENDING-ADJUST.BALANCE-BALANCE.MAINTENANCE          AUTH      USER
+          20190119 AAACT1791501377508 LENDING-CAPTURE.BALANCE-BALANCE.MAINTENANCE         AUTH      USER
+ 20190107 20190119 AAACT1791501377502 LENDING-TAKEOVER-ARRANGEMENT                        AUTH      USER
+ 
+
