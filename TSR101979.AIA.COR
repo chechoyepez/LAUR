@@ -2,7 +2,7 @@
 *-----------------------------------------------------------------------------
 * <Rating>-20</Rating>
 *-----------------------------------------------------------------------------
-    SUBROUTINE TSR101979.AIA.COR
+    SUBROUTINE TSR197983.AIA.COR
 **===================================================================================================================================
 * Program to update incorrect period from AA.INTEREST.ACCRUALS
 *
@@ -12,8 +12,7 @@
     $INSERT I_F.AA.INTEREST.ACCRUALS
 **===================================================================================================================================
     GOSUB INIT
-    GOSUB PROCESS
-	
+    GOSUB PROCESS	
 
     RETURN
 **===================================================================================================================================
@@ -27,37 +26,39 @@ INIT:
     F.SL = ""
     CALL OPF(FN.SL,F.SL)
 
-    *CALL F.READ(FN.SL,'PACS00900409.SL1',R.SL,F.SL,SL.ERR)
-	
+    	
 
     RETURN
 **===================================================================================================================================
 PROCESS:
 
-	AA.ID1 = 'AA19019MV9DG'
-     
+    AA.ID1 = 'AA19019YM8YQ'
+    AIA.ID = AA.ID1:"-PRINCIPALINT"
+    PRINT "Processing of AA19019YM8YQ"
+    R.AIA = ""
+    AIA.ERR = ""
 
-	AIA.ID = AA.ID1:"-PRINCIPALINT"
+    CALL F.READ(FN.AIA, AIA.ID, R.AIA, F.AIA, AIA.ERR)
+    
+    IF NOT(AIA.ERR) AND R.AIA THEN                  
+	R.AIA<AA.INT.ACC.LINKED.RATE.CHANGE> = ''
+        WRITE R.AIA TO F.AIA,AIA.ID 
+    END  
+
+    AA.ID1 = 'AA19019YM8YQ'
+    AIA.ID = AA.ID1:"-ESCROWCRINT"
 
     R.AIA = ""
     AIA.ERR = ""
 
     CALL F.READ(FN.AIA, AIA.ID, R.AIA, F.AIA, AIA.ERR)
-
-    IF NOT(AIA.ERR) AND R.AIA THEN
-	              
-                   R.AIA<AA.INT.ACC.DAYS,31> = '6'
-		   R.AIA<AA.INT.ACC.RATE ,31> = '5.09'
-             
-             R.AIA<AA.INT.ACC.TOT.ACCR.AMT, 51> = '348.46'
-             R.AIA<AA.INT.ACC.TOT.DUE.AMT, 51> = '348.46'                      
-	     R.AIA<AA.INT.ACC.TOT.ACCR.AMT, 52> = '345.45'
-             R.AIA<AA.INT.ACC.TOT.DUE.AMT, 52> = '345.45'
-
+    
+    IF NOT(AIA.ERR) AND R.AIA THEN                  
+	R.AIA<AA.INT.ACC.LINKED.RATE.CHANGE> = ''
         WRITE R.AIA TO F.AIA,AIA.ID 
+    END 
 
-    END  
-
+    PRINT "Process completed for AA19019YM8YQ"
 
     RETURN
 **===================================================================================================================================
