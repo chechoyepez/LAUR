@@ -1,0 +1,1191 @@
+* @ValidationCode : MjoxNTEwNTA3NzU2OkNwMTI1MjoxNjA5NzU1OTk0NzUxOmpoYWxha3Zpajo0MjowOjA6LTE6ZmFsc2U6Ti9BOlIxN19TUDUxLjA6NTU5OjQ3OQ==
+* @ValidationInfo : Timestamp         : 04 Jan 2021 15:56:34
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : jhalakvij
+* @ValidationInfo : Nb tests success  : 42
+* @ValidationInfo : Nb tests failure  : 0
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : 479/559 (85.6%)
+* @ValidationInfo : Strict flag       : false
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R17_SP51.0
+*------------------------------------------------------------------------------
+* <Rating>-242</Rating>
+*-----------------------------------------------------------------------------
+$PACKAGE AA.Account
+SUBROUTINE AA.ACCOUNT.VALIDATE
+
+*** <region name= PROGRAM DESCRIPTION>
+***
+*
+** Provides cross-validation of data entered in a property for the
+** arrangement property applications
+*
+*** </region>
+
+*** <region name= MODIFICATION HISTORY>
+***
+* Modification History :
+*
+* 31/07/06 - EN_10003023
+*            New module AA.
+*
+* 26/09/06 - BG_100012129
+*            Ref : SAR-2006-06-02-0006
+*            Added alternate account and currency market logics
+*
+* 27/05/08 - BG_100018575
+*            Ref : TTS0801913
+*            Validate category in designer level itself.
+*
+* 06/06/08 - EN_10003640
+*            Ref: SAR-2008-02-08-0004
+*            Default BASE.DATE.TYPE to AGREEMENT if nothing is specified.
+*
+* 24/06/08 - BG_100018921
+*            Error format for Anniversary date should be modified.
+*
+* 16/10/08 - EN_10003886
+*            Ref : SAR-2008-08-29-0003
+*            Changes to improve Performance. Routine name changed to new format.
+*
+* 26/01/09 - BG_100021772
+*            ANNIVERSARY field is made IN2MD type. Hence remove the validation.
+*
+* 24/02/09 - CI_10060877
+*            Ref : HD0905099
+*            ID.NEW is initialized with Arrangement Account Id.
+*
+* 29/04/09 - EN_10004061
+*            Ref : SAR-2008-09-17-0005
+*            Defaulted date convention, date adjustement and bus day centres value at arrangement level
+*
+* 08/04/09 - BG_100023535
+*            Ref : TTS0907281
+*            If date convention is set as calendar, then date adjustement should not default to value
+*
+* 25/05/09 - BG_100023763
+*            Ref : TTS0907527
+*            'RETURN' statement is given in the para COMMON.REAL.CROSSVAL, in AA.ACCOUNT.VALIDATE
+*
+*10/07/09 -  CI_10064684
+*            Ref : HD0923494
+*            If the account id is not there then generate the account through the routine AC.GET.ACCOUNT.NUMBER.
+*
+* 10/09/09 - CI_10066032
+*            Ref : HD0933743
+*            Added check for the account reference. Should not allow the same a/c reference to
+*            more than one arrangement.
+*
+* 13/09/10 - CI-10066787
+*            Ref : HD0935008
+*            The check for Alternate account id has been moved from common.crossval to
+*            Arrangement level.
+*
+* 24/11/10 - BG_100025897
+*            call the DEFAULT.ARRANGEMENT sub para
+*
+* 11/10/10 - Task No - 61345
+*            The Changes has been done to this routine to validate the portfolio id with customer id.
+*
+* 02/08/11 - Defect:250372
+*          - Task:254821
+*          - Unique Account Ref for arr, Check has been redefined only for Live arrangement.
+*
+* 04/08/11 - Defect 19221 / Task 22848
+*            New field introduced to support PASSBOOK functionality in Account PC
+*
+* 06/09/12   - Defect : 474532
+*              Task : 476865
+*             Schedules are projected for arrangement based on the arrangement currency and not on the BUS.DAY.CENTRES.
+*
+* 19/10/12  - Defect : 494566
+*             Task   : 503659
+*             Raised error message when existing Non AA account in account reference.
+*
+* 26/04/14 - Task : 983049
+*            Defect : 972258
+*            Don't assign the Bus Day Center value based on Arrangement Currency unless it is null
+*
+* 09/09/15 - Task : 1447056
+*            Enhancement : 1434821
+*            Check if Portfolio id is belongs to any of the customers from AAA customers.
+*
+* 17/11/15 - Task : 1533664
+*            Defect : 1533129
+*            Take customer numbers from the arrangement record insted of AAA. Since we don't populte the
+*            customer details in AAA other then the new arrangement and change customer activities.
+*
+* 22/06/16 - Task : 1776395
+*            Enhancement : 1774559
+*            DL209 Posting restriction enhancement
+*
+* 06/09/16 - Task : 1849116
+*            Enhancement : 1846589
+*            DL209 Posting restriction integration with BFW reason codes
+*
+* 20/09/16 - Task : 1859958
+*            Enhancement : 1846813
+*            Extended blocking and unblocking codes validation
+*
+* 31/01/17 - Defect : 1971447 / Task : 1979102
+*            Error message is always thrown at First multi value when Alternate ID is entered wrongly
+*            in the second or third multi value field while inputting Deposit new arrangement.
+*
+* 09/02/16 - Task : 2005722
+*            Defect : 2004869
+*            MEMO Accounting - Pending Closure Arrangement in Link Ac Number
+*
+* 09/02/16 - Task : 2005972
+*            Defect : 2005261
+*            MEMO Accounting - Link Ac Number the same Product Line
+*
+* 24/02/17 - Task: 2020342
+*            Enhancement: 2020346
+*            PASSBOOK field value set as 'Y' along with HVT.FLAG as 'Yes' then
+*            we need to raise the error message.
+*
+* 10/03/17 - Task: 2020813
+*            Enhancement: 2020817
+*            To restrict the HVT.FLAG field value changes as 'Yes' to Null.
+*
+* 09/10/17 - Defect - 2295618
+*            Task   - 2299501
+*            Reverse the NEW/TAKEOVER activity is allowed, even if POS restriction is updated
+*
+* 04/04/18 - Defect - 2524553
+*            Task   - 2529448
+*            Existing T24 AC account can linked to arrangement, when there is no outstanding balance in the account
+*            through accounts take over activity.
+*
+* 24/09/18 - Defect - 2524553
+*            Task   - 2712165
+*            During the takeover if the account aleady exists in T24, then system must chceck the error
+*            "AA-CONV.AC.TO.AR.ALLOWED" before convert into AR to confirm the client dependecy.
+*            Also system should not allow to reverse the take over activity when the take over activity convert
+*            AC account to AR account.
+*
+* 19/10/18  -  Task-2802911
+*             Reference : 2815858
+*            When convert the existing AC account to AD account system should do some validation. To achive this
+*            call the AA.ACCOUNT.TAKEOVER.VALIDATE and during the reversal of same take over system should not
+*            allow to do reversal.
+*
+* 27/10/18  -  Task-2830735
+*             Reference : 2815858
+*            Fix for solve the TAFC build issue.
+*
+*28/06/19 - Task:3204140
+*           Defect:3197074
+*           When user try to do the repayment, system reverse and replay the positing restriction activity,
+*           but system not allowed to reverse the posting restriction
+*
+*17/07/19 - Task   : 3235006
+*           Defect : 3218842
+*           When secondardy activity updates the posting restriction related files, System should not throw an error while reversing backdated master activity
+*
+*23/07/19 - Task   :3244472
+*           Defect :3218842
+*           Regression failure fix
+*
+*01/01/20  - Task :   4158517
+*            Defect : 4100002
+*            When user triggering backdated change product activity after posting restriction removal, system
+*            should allow without any error
+*
+*-------------------------------------------------------------------------------------------------------------
+*** </region>
+*** <region name= INSERTS>
+***
+    $USING AA.Account
+    $USING AC.AccountOpening
+    $USING AA.Framework
+    $USING EB.API
+    $USING EB.ErrorProcessing
+    $USING EB.Template
+    $USING EB.DataAccess
+    $USING ST.Config
+    $USING EB.SystemTables
+    $USING AC.Config
+    $USING SC.ScoPortfolioMaintenance
+    $USING EB.OverrideProcessing
+    $USING AA.PaymentSchedule
+    $USING AA.Interest
+
+*** </region>
+
+*** <region name= PROCESS LOGIC>
+***
+    GOSUB INITIALISE
+*
+    GOSUB PROCESS.CROSSVAL
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= INIT>
+***
+INITIALISE:
+    PR.ATTRIBUTES = ''
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcStartDate
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcBlockingCode
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcBlockingReason
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcExpiryDate
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcUnblockingCode
+    PR.ATTRIBUTES<-1> = AA.Account.Account.AcUnblockingReason
+
+    RET.ERR = ''
+    
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= PROCESS.CROSSVAL>
+PROCESS.CROSSVAL:
+***
+    IF EB.SystemTables.getMessage() EQ '' THEN    ;* Only during commit...
+        BEGIN CASE
+            CASE EB.SystemTables.getVFunction() EQ 'D'
+                GOSUB DELETE.CROSSVAL
+            CASE EB.SystemTables.getVFunction() EQ 'R'
+                GOSUB REVERSE.CROSSVAL
+            CASE 1      ;* The real crossval...
+                GOSUB REAL.CROSSVAL
+        END CASE
+    END
+*
+    IF EB.SystemTables.getMessage() EQ 'AUT' OR EB.SystemTables.getMessage() EQ 'VER' THEN          ;* During authorisation and verification...
+        GOSUB AUTH.CROSSVAL
+    END
+*
+    IF EB.SystemTables.getMessage() EQ 'ERROR' THEN         ;* During delivery preview and default...
+
+    END
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= REAL CROSSVAL>
+***
+REAL.CROSSVAL:
+*
+* Real cross validation goes here....
+*
+    BEGIN CASE
+        CASE AA.Framework.getProductArr() EQ AA.Framework.Product         ;* If its from the designer level
+
+        CASE AA.Framework.getProductArr() EQ AA.Framework.AaArrangement   ;* If its from the arrangement level
+
+            GOSUB ARR.CROSSVAL
+
+    END CASE
+*
+    GOSUB COMMON.REAL.CROSSVAL
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= ARR.CROSSVAL>
+ARR.CROSSVAL:
+***
+    EFF.DATE = AA.Framework.getActivityEffDate()
+
+    IF NOT(EB.SystemTables.getRNew(AA.Account.Account.AcAccountReference)) THEN
+        AC.AccountOpening.GetAccountNumber("AA", ACCOUNT.NO)
+        EB.SystemTables.setRNew(AA.Account.Account.AcAccountReference, ACCOUNT.NO)
+    END
+
+    GOSUB DEFAULT.ARRANGEMENT
+
+    IF AA.Framework.getNewArrangement() AND EB.SystemTables.getApplication()[1,6] NE "AA.SIM" THEN
+        GOSUB CHECK.ACCOUNT.ID
+    END
+
+* Alternate account processing
+* Currently error message would be displayed only at the first position
+*
+    EB.API.CommonSave()
+
+    ALTTYPE.CNTIDS = COUNT(EB.SystemTables.getRNew(AA.Account.Account.AcAltIdType), @VM) + 1
+    FOR ALT.CNT = 1 TO ALTTYPE.CNTIDS
+        IF EB.SystemTables.getRNew(AA.Account.Account.AcAltId)<1,ALT.CNT> THEN  ;* Only when AltId is entered by the User.
+            EB.SystemTables.setIdNew(EB.SystemTables.getRNew(AA.Account.Account.AcAccountReference))          ;* AC.ALTID.PROCESS uses this variable to check changes in alterante account ids
+            IF EB.SystemTables.getEtext() THEN
+                ACCT.REC = ""
+                ACCT.REC<AC.AccountOpening.Account.AltAcctType> = EB.SystemTables.getRNew(AA.Account.Account.AcAltIdType)<1,ALT.CNT>
+                ACCT.REC<AC.AccountOpening.Account.AltAcctId> = EB.SystemTables.getRNew(AA.Account.Account.AcAltId)<1,ALT.CNT>
+            END ELSE
+                ACCT.REC = ""
+                ACCT.REC<AC.AccountOpening.Account.AltAcctType> = EB.SystemTables.getRNew(AA.Account.Account.AcAltIdType)
+                ACCT.REC<AC.AccountOpening.Account.AltAcctId> = EB.SystemTables.getRNew(AA.Account.Account.AcAltId)
+            END
+            EB.SystemTables.setEtext("")
+
+            AC.AccountOpening.AltidProcess(ACCT.REC, "VAL", "1")
+
+            IF EB.SystemTables.getEtext() AND EB.SystemTables.getComi() EQ EB.SystemTables.getRNew(AA.Account.Account.AcAltId)<1,ALT.CNT> THEN
+                EB.SystemTables.setAf(AA.Account.Account.AcAltId)
+                EB.SystemTables.setAv(ALT.CNT)
+                EB.ErrorProcessing.StoreEndError()
+                EB.SystemTables.setComi("")
+            END
+        END
+    NEXT ALT.CNT
+
+    EB.API.CommonRestore()
+
+** Perform this validation only if Portfolio Id is input
+
+    CUST.ID = FIELDS(EB.SystemTables.getRNew(AA.Account.Account.AcPortfolioId), AA.Framework.Sep, 1)
+
+    IF CUST.ID THEN
+        GOSUB CHECK.PORTFOLIO.ID
+    END
+
+* Posting restriction related validation
+    R.ACC = ''
+    AC.ACCOUNT.ID = EB.SystemTables.getRNew(AA.Account.Account.AcAccountReference)
+    R.ACC = AC.AccountOpening.Account.Read(AC.ACCOUNT.ID, IO.ERR)
+
+    TOT.TIER.CNT = COUNT(EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict), @VM) + 1
+
+    FOR TIER.CNT = 1 TO TOT.TIER.CNT
+        VALID.START.DATE = 0
+        VALID.END.DATE = 0
+
+        IF AA.Framework.getNewArrangement() THEN
+            GOSUB VALIDATE.NEW.ARR.BACKDATED.RESTRICTION
+        END
+
+* update activity, do not allow backdated activity to create or update any posting restriction related information
+        REPLAY.MODE = ""
+        AA.Interest.CheckRrMode(REPLAY.MODE)
+    
+        IF NOT(AA.Framework.getNewArrangement()) AND NOT(REPLAY.MODE) THEN   ;*Skip the check if the activity is being replayed
+            GOSUB VALIDATE.BACKDATED.RESTRICTION
+        END
+
+        GOSUB CHECK.VALID.START.END.DATE
+  
+* Start date should be from EFF.DATE only for newly created posting restriction or modifying start.date cases
+        IF VALID.START.DATE THEN
+
+            GOSUB VALIDATE.ACTIVE.RESTRICTION
+
+            GOSUB VALIDATE.START.DATE
+        END
+
+* end date should be after EFF.DATE
+        IF VALID.END.DATE THEN
+            GOSUB VALIDATE.END.DATE
+        END
+
+* end date should be after start date
+        IF VALID.START.DATE AND VALID.END.DATE THEN
+            GOSUB VALIDATE.BOTH.DATES
+        END
+
+* Validate blocking and unblocking code
+        POST.RESTRICT = EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1, TIER.CNT>
+        BLOCKING.CODE = EB.SystemTables.getRNew(AA.Account.Account.AcBlockingCode)<1, TIER.CNT>
+        UNBLOCKING.CODE = EB.SystemTables.getRNew(AA.Account.Account.AcUnblockingCode)<1, TIER.CNT>
+        IF POST.RESTRICT AND (BLOCKING.CODE OR UNBLOCKING.CODE) THEN
+            GOSUB VALIDATE.BLOCK.UNBLOCK.REASON.CODE
+        END
+
+    NEXT TIER.CNT
+
+    IF NOT(REPLAY.MODE) THEN   ;*Skip the check if the activity is being replayed
+        GOSUB VALIDATE.RESTRICTION.REMOVAL
+    END
+      
+*   get Arrangement details
+    accountReference = EB.SystemTables.getRNew(AA.Account.Account.AcAccountReference)
+    arrCurrency = AA.Framework.getArrCurrency()
+
+*   get Link Ac Number details
+    aLinkAcNumber = EB.SystemTables.getRNew(AA.Account.Account.AcLinkAcNumber)
+    linkAcNumberQty = COUNT( aLinkAcNumber, @VM ) + 1
+
+*   No duplicates allowed in LinkAcNumber field
+    EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+    EB.Template.Dup()
+
+*   as of now link ac number may be populated only once, in 1st MV position
+    IF linkAcNumberQty GT 1 THEN
+        EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+        EB.SystemTables.setEtext( "AA-MEMOAC.ONE.LINK.AC" )
+        EB.SystemTables.setAv( acctCnt )
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+    FOR acctCnt=1 TO linkAcNumberQty
+        linkAcNumber = aLinkAcNumber<1, acctCnt>
+
+        IF linkAcNumber THEN
+            IF linkAcNumber NE accountReference THEN
+                GOSUB ValidateMemoAccountingFields
+            END ELSE
+* link ac number cannot be populated with account reference number, which would not make sense from business point of view
+                EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+                EB.SystemTables.setEtext( "AA-MEMOAC.ACC.EQ" )
+                EB.SystemTables.setAv( acctCnt )
+                EB.ErrorProcessing.StoreEndError()
+            END
+        END
+    NEXT acctCnt
+
+    GOSUB ValidateHvtFlagValueChange    ;* Validate the HVT.FLAG field value change.
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= ValidateHvtFlagValueChange>
+ValidateHvtFlagValueChange:
+
+** Restrict to change the hvtflag field value as Yes to null.
+    IF EB.SystemTables.getROld(AA.Account.Account.AcHvtFlag) EQ 'YES' AND EB.SystemTables.getRNew(AA.Account.Account.AcHvtFlag) EQ '' THEN
+        EB.SystemTables.setAf(AA.Account.Account.AcHvtFlag)
+        EB.SystemTables.setEtext("AA-NOT.ALLOWED.TO.CHG.HVT.FLAG")
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= ValidateMemoAccountingFields>
+ValidateMemoAccountingFields:
+
+*   read link ac number details
+    rAccount = ''
+    sErrorAc = ''
+    rAccount = AC.AccountOpening.Account.Read( linkAcNumber, sErrorAc )
+    IF sErrorAc THEN
+        sLinkAcNoCurrency = ''
+        sLinkAcNoCoCode = ''
+        sLinkAcNoCustomer = ''
+        linkAcNumberArrangementId = ''
+    END ELSE
+        sLinkAcNoCurrency = rAccount<AC.AccountOpening.Account.Currency>
+        sLinkAcNoCoCode = rAccount<AC.AccountOpening.Account.CoCode>
+        sLinkAcNoCustomer = rAccount<AC.AccountOpening.Account.Customer>
+        linkAcNumberArrangementId = rAccount<AC.AccountOpening.Account.ArrangementId>
+    END
+
+*   check if account reference and link account have the same currency
+    IF sLinkAcNoCurrency NE arrCurrency THEN
+        EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+        EB.SystemTables.setEtext( 'AA-MEMOAC.CCY.NOT.EQ' )
+        EB.SystemTables.setAv( acctCnt )
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+*   read link account arrangement
+    IF linkAcNumberArrangementId THEN
+        errLinkArr = ''
+        rLinkAcNumberArr = AA.Framework.Arrangement.Read( linkAcNumberArrangementId, errLinkArr )
+        IF errLinkArr THEN
+            linkArrArrStatus = ''
+            linkArrProductLine = ''
+        END ELSE
+            linkArrArrStatus = rLinkAcNumberArr<AA.Framework.Arrangement.ArrArrStatus>
+            linkArrProductLine = rLinkAcNumberArr<AA.Framework.Arrangement.ArrProductLine>
+        END
+
+*       Block AR accounts set in LINK.AC.NUMBER if ARR.STATUS=PENDING.CLOSURE
+        IF linkArrArrStatus MATCHES 'PENDING.CLOSURE' :@VM: 'CLOSE' THEN
+            EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+            EB.SystemTables.setEtext( 'AA-MEMOAC.AC.PEND.CLOSE' :@FM: linkAcNumber :@VM: linkArrArrStatus )
+            EB.SystemTables.setAv( acctCnt )
+            EB.ErrorProcessing.StoreEndError()
+        END
+
+*       Link Ac Number allows only simple accounts or of the same product line
+        arrProductLine = AA.Framework.getRArrangement()<AA.Framework.Arrangement.ArrProductLine>
+        IF linkArrProductLine NE arrProductLine THEN
+            EB.SystemTables.setAf(AA.Account.Account.AcLinkAcNumber)
+            EB.SystemTables.setEtext( 'AA-MEMOAC.DIFF.PROD.LINE' :@FM: linkAcNumber :@VM: linkArrProductLine )
+            EB.SystemTables.setAv( acctCnt )
+            EB.ErrorProcessing.StoreEndError()
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= Check Portfolio Id>
+CHECK.PORTFOLIO.ID:
+
+    CUSTOMER.IDS = AA.Framework.getRArrangement()<AA.Framework.Arrangement.ArrCustomer>
+
+    PORTFOLIO.CUSTOMER = ""   ;* Initialise with Null
+    CUS.ID = ""     ;* Customer position
+
+    NO.CUSTOMERS = DCOUNT(CUSTOMER.IDS, @VM)
+
+    FOR CUS.ID = 1 TO NO.CUSTOMERS
+        CUSTOMER.ID = CUSTOMER.IDS<1,CUS.ID>
+        IF CUSTOMER.ID AND CUST.ID AND CUSTOMER.ID EQ CUST.ID THEN
+            PORTFOLIO.CUSTOMER = 1      ;* Portfolio is not belongs to non of the customers
+        END
+    NEXT CUS.ID
+
+*** Raise error message if portfolio is belongs to non of the customers
+
+    IF NOT(PORTFOLIO.CUSTOMER) THEN
+        EB.SystemTables.setAf(AA.Account.Account.AcPortfolioId)
+        EB.SystemTables.setEtext("AC.AA.PORTFOLIO.NOT.VALID.CUSTOMER")
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+**** Check the closing date with arrangement date
+    R.SEC.ACC.MASTER = ''
+    YERR = ''
+    PORT.COMP = ''
+    SEC.ACC.NO = ''
+    SEC.ACC.NO = EB.SystemTables.getRNew(AA.Account.Account.AcPortfolioId)
+    R.SEC.ACC.MASTER = SC.ScoPortfolioMaintenance.SecAccMaster.Read(SEC.ACC.NO, YERR)
+    CLOSURE.DATE = R.SEC.ACC.MASTER<SC.ScoPortfolioMaintenance.SecAccMaster.ScSamClosureDate>
+    PORT.COMP = R.SEC.ACC.MASTER<SC.ScoPortfolioMaintenance.SecAccMaster.ScSamCoCode>
+
+    IF CLOSURE.DATE AND (CLOSURE.DATE LE EB.SystemTables.getToday()) AND EB.SystemTables.getIdCompany() EQ PORT.COMP THEN
+        EB.SystemTables.setText("PORT.CLOSED":@FM:SEC.ACC.NO:@VM:CLOSURE.DATE)
+        EB.OverrideProcessing.StoreOverride (CURR.NO)
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= COMMON.REAL.CROSSVAL>
+COMMON.REAL.CROSSVAL:
+***
+
+    GOSUB CHECK.DATE.ADJUSTMENT
+    GOSUB CHECK.BUS.DAY.CENTRES
+    GOSUB COMMON.VALIDATE.POSTING.RESTRICTION
+
+    GOSUB VALIDATE.HVT.FLAG   ;* Check HVT.FLAG flag for accounts
+
+    EB.SystemTables.setAf(AA.Account.Account.AcCategory)
+
+    IF EB.SystemTables.getRNew(EB.SystemTables.getAf()) AND (EB.SystemTables.getRNew(EB.SystemTables.getAf()) < 1000 OR EB.SystemTables.getRNew(EB.SystemTables.getAf()) > 9999) THEN
+        EB.SystemTables.setEtext("AC.AA.CAT.RG.1000.9999")
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+    EB.SystemTables.setAf(AA.Account.Account.AcBaseDateType)
+    IF NOT(EB.SystemTables.getRNew(EB.SystemTables.getAf())) THEN
+        EB.SystemTables.setRNew(EB.SystemTables.getAf(), 'AGREEMENT')
+    END
+
+RETURN
+*
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= default arrangement fields>
+DEFAULT.ARRANGEMENT:
+********************
+
+    EB.SystemTables.setAf(AA.Account.Account.AcDateConvention)
+
+    IF EB.SystemTables.getRNew(EB.SystemTables.getAf()) EQ "" THEN
+        EB.SystemTables.setRNew(EB.SystemTables.getAf(), "CALENDAR")
+    END
+
+    EB.SystemTables.setAf(AA.Account.Account.AcDateAdjustment)
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcDateConvention) AND EB.SystemTables.getRNew(AA.Account.Account.AcDateConvention) MATCHES "CALENDAR" ELSE
+
+        IF EB.SystemTables.getRNew(EB.SystemTables.getAf()) EQ "" THEN
+
+            EB.SystemTables.setRNew(EB.SystemTables.getAf(), "VALUE")
+
+        END
+    END
+
+    EB.SystemTables.setAf(AA.Account.Account.AcBusDayCentres)
+
+    IF EB.SystemTables.getRNew(EB.SystemTables.getAf()) EQ "" THEN
+        EB.SystemTables.setRNew(EB.SystemTables.getAf(), AA.Framework.getArrCurrency()[1,2])
+    END
+    EB.SystemTables.setAf(AA.Account.Account.AcPassbook)
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcPassbook) EQ '' THEN
+        EB.SystemTables.setRNew(AA.Account.Account.AcPassbook, 'NO')
+    END
+
+* Default the
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= DELETE.CROSSVAL>
+DELETE.CROSSVAL:
+***
+    BEGIN CASE
+        CASE AA.Framework.getProductArr() EQ AA.Framework.Product         ;* If its from the designer level
+
+        CASE AA.Framework.getProductArr() EQ AA.Framework.AaArrangement   ;* If its from the arrangement level
+
+
+    END CASE
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= REVERSE.CROSSVAL>
+REVERSE.CROSSVAL:
+***
+    CURRENTAAAID = AA.Framework.getC_arractivityid()
+    MASTERAAAID = AA.Framework.getC_arractivityrec()<AA.Framework.ArrangementActivity.ArrActMasterAaa>
+    tmp.aaRR_AAAMasterActRec = AA.Framework.getAarr_aaamasteractrec()   ;* Reversal master AAA record
+    R.REV.MASTER.REC = RAISE(tmp.aaRR_AAAMasterActRec)
+    REV.MASTER.ACTIVITY.ID = R.REV.MASTER.REC<AA.Framework.ArrangementActivity.ArrActRevMasterAaa> ;* Get the reversal master activity id
+    
+    BEGIN CASE
+        CASE AA.Framework.getProductArr() EQ AA.Framework.Product         ;* If its from the designer level
+
+        CASE AA.Framework.getProductArr() EQ AA.Framework.AaArrangement   ;* If its from the arrangement level
+** Allowed to reverse an back dated Master activity, NEW/TAKEOVER,User initiated activity which update POS related fields
+** Allowed to reverse an backdated Master activity, when posting restrict field is updated through secondary activity
+            IF AA.Framework.getActivityEffDate() LT EB.SystemTables.getToday() AND NOT(AA.Framework.getNewArrangement()) AND (REV.MASTER.ACTIVITY.ID AND REV.MASTER.ACTIVITY.ID NE MASTERAAAID) THEN
+                GOSUB VALIDATE.NO.REVERSE.IF.POS.CHANGED
+            END
+            R.ACCOUNT.DETAILS = AA.Framework.getAccountDetailsSave()
+            IF R.ACCOUNT.DETAILS<AA.PaymentSchedule.AccountDetails.AdTakeoverArr> EQ "YES" THEN ;* Indicator denote existing AC convert to AA
+                GOSUB CHECK.ACC.TAKEOVER.REV
+            END
+            
+    END CASE
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= validate date adjustment field>
+CHECK.DATE.ADJUSTMENT:
+**********************
+    EB.SystemTables.setAf(AA.Account.Account.AcDateAdjustment)
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcDateConvention) AND EB.SystemTables.getRNew(AA.Account.Account.AcDateConvention) MATCHES "FORWARD":@VM:"BACKWARD":@VM:"FORWARD SAME MONTH" ELSE
+        IF EB.SystemTables.getRNew(EB.SystemTables.getAf()) THEN
+            EB.SystemTables.setEtext("AA.PS.NOT.ALLOWED.FOR.THIS.DATE.CON")
+            EB.ErrorProcessing.StoreEndError()
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= validate bus day centre field>
+CHECK.BUS.DAY.CENTRES:
+**********************
+    EB.SystemTables.setAf(AA.Account.Account.AcBusDayCentres)
+    EB.Template.Dup()         ;* Ensure no duplicates
+
+    MV.COUNT = COUNT(EB.SystemTables.getRNew(AA.Account.Account.AcBusDayCentres), @VM) + 1
+    FOR I = 1 TO MV.COUNT
+        EB.SystemTables.setAv(I)
+        BEGIN CASE
+            CASE LEN(EB.SystemTables.getRNew(AA.Account.Account.AcBusDayCentres)<1,EB.SystemTables.getAv()>) EQ "2"         ;* Check for valid country
+                REQD.ID = EB.SystemTables.getRNew(AA.Account.Account.AcBusDayCentres)<1,EB.SystemTables.getAv()>
+                R.COMPANY.RECORD = ST.Config.Country.CacheRead(REQD.ID, REC.ERR)
+                IF REC.ERR THEN
+                    EB.SystemTables.setAf(AA.Account.Account.AcBusDayCentres)
+                    EB.SystemTables.setEtext(REC.ERR)
+                    EB.ErrorProcessing.StoreEndError()
+                END
+
+            CASE EB.SystemTables.getRNew(AA.Account.Account.AcBusDayCentres)<1,EB.SystemTables.getAv()> ;* Check for valid region
+                REQD.ID = EB.SystemTables.getRNew(AA.Account.Account.AcBusDayCentres)<1,EB.SystemTables.getAv()>
+                R.REGION.RECORD = ST.Config.Region.CacheRead(REQD.ID, REC.ERR)
+                IF REC.ERR THEN
+                    EB.SystemTables.setAf(AA.Account.Account.AcBusDayCentres)
+                    EB.SystemTables.setEtext(REC.ERR)
+                    EB.ErrorProcessing.StoreEndError()
+                END
+        END CASE
+    NEXT I
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= AUTH.CROSSVAL>
+AUTH.CROSSVAL:
+***
+    BEGIN CASE
+        CASE AA.Framework.getProductArr() EQ AA.Framework.Product         ;* If its from the designer level
+
+        CASE AA.Framework.getProductArr() EQ AA.Framework.AaArrangement   ;* If its from the arrangement level
+
+    END CASE
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+***<region name = CHECK.ACCOUNT.ID>
+CHECK.ACCOUNT.ID:
+***
+    
+    R.ACC = ''
+    ACCOUNT.ID = EB.SystemTables.getRNew(AA.Account.Account.AcAccountReference)
+    R.ACC = AC.AccountOpening.Account.Read(ACCOUNT.ID, IO.ERR)
+    IF R.ACC THEN
+        BEGIN CASE
+            CASE NOT(R.ACC<AC.AccountOpening.Account.ArrangementId>)
+                PRODUCT.LINE = AA.Framework.getActivityId()<AA.Framework.ActProductLine>       ;* Product line
+                CURRENT.ACTION = AA.Framework.getActivityId()<AA.Framework.ActActivity>       ;* Current activity to process
+                GOSUB VAL.EXISTS.AC.TAKEOVER
+                
+                IF CURRENT.ACTION EQ "TAKEOVER" AND ((PRODUCT.LINE EQ "ACCOUNTS" AND AC.TAKOVER.ALLOWED) OR (PRODUCT.LINE EQ "DEPOSITS")) THEN ;* If the account is already exists T24 account then system allow to relate the account with Arrangement
+                    
+                    EFFECTIVE.DATE = AA.Framework.getRArrangementActivity()<AA.Framework.ArrangementActivity.ArrActEffectiveDate>   ;* Get the activity effective date
+                    AA.Account.AccountTakeoverValidate(ACCOUNT.ID, EFFECTIVE.DATE, RET.ERROR)   ;* Call the validate routine for take over validation if the account is existing T24 AC account.
+                    
+                    IF PRODUCT.LINE EQ "DEPOSITS" THEN
+                        AA.Framework.setTakeoverArr("YES")  ;* Set the indicator. To update the account details takeover indicator.
+                    END
+                END ELSE
+	                EB.SystemTables.setAf(AA.Account.Account.AcAccountReference)
+	                EB.SystemTables.setEtext("AA.AC.ACCOUNT.EXIST.ALREADY.NONAA")
+	                EB.ErrorProcessing.StoreEndError()
+                END
+            CASE R.ACC<AC.AccountOpening.Account.ArrangementId> AND R.ACC<AC.AccountOpening.Account.ArrangementId> NE AA.Framework.getArrId()
+                EB.SystemTables.setAf(AA.Account.Account.AcAccountReference)
+                EB.SystemTables.setEtext("AA.AC.ACCOUNT.EXIST.ALREADY")
+                EB.ErrorProcessing.StoreEndError()
+        END CASE
+    END
+*
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.EFFECTIVE.DATE>
+*** <desc>Validate the date is not before EFF.DATE </desc>
+VALIDATE.EFFECTIVE.DATE:
+* newly created posting restriction
+* NOTE: This validation is only for newly record or the date is modified.
+    LOCATE EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> IN EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict)<1,1> SETTING TIER.POS ELSE
+        VALIDATE.DATE = 1
+    END
+
+* not newly created but date is updated
+    IF NOT(VALIDATE.DATE) AND EB.SystemTables.getROld(EB.SystemTables.getAf())<1, TIER.POS> NE EB.SystemTables.getRNew(EB.SystemTables.getAf())<1,TIER.CNT> THEN
+        VALIDATE.DATE = 1
+    END
+
+    IF VALIDATE.DATE AND EB.SystemTables.getRNew(EB.SystemTables.getAf())<1,TIER.CNT> LT EFF.DATE THEN
+        EB.SystemTables.setAv(TIER.CNT)
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.POSTING.RESTRICTION.NULL>
+*** <desc>Validate Posting restriction field set to null, then other posting restriction related fields can only be null; if one of them is null, then size cannot be more than 1. </desc>
+VALIDATE.POSTING.RESTRICTION.NULL:
+
+    IF NOT(EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1, TIER.CNT>) THEN
+
+        EB.API.GetStandardSelectionDets('AA.ARR.ACCOUNT', SS.REC)
+
+        ANY.FIELD.NOT.NULL = 0
+        TOT.LIST.CNT = DCOUNT(PR.ATTRIBUTES, @FM)
+        FOR LIST.CNT = 1 TO TOT.LIST.CNT
+
+            IF EB.SystemTables.getRNew(PR.ATTRIBUTES<LIST.CNT>)<1, TIER.CNT> THEN
+                ANY.FIELD.NOT.NULL = 1
+
+                EB.API.FieldNumbersToNames(PR.ATTRIBUTES<LIST.CNT>, SS.REC, FIELD.NAME, DATA.TYPE, ERR.MSG)
+
+                EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+                EB.SystemTables.setAv(TIER.CNT)
+                EB.SystemTables.setEtext("AA-RESTRICTION.MANDATORY":@FM:FIELD.NAME:'.':TIER.CNT)
+                EB.ErrorProcessing.StoreEndError()
+
+            END
+        NEXT LIST.CNT
+
+* If not any field has been set, but this is not the only MV group set, then
+* it is not allowed to have a empty MV group.
+        IF NOT(ANY.FIELD.NOT.NULL) AND TOT.TIER.CNT GE 2 THEN
+            EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+            EB.SystemTables.setAv(TIER.CNT)
+            EB.SystemTables.setEtext("AA-POSTING.RESTRICTION.NULL")
+            EB.ErrorProcessing.StoreEndError()
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= CHECK.VALID.START.END.DATE>
+*** <desc> check if there is valid start date or end date </desc>
+CHECK.VALID.START.END.DATE:
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcStartDate)<1,TIER.CNT> THEN
+        VALID.START.DATE = 1
+    END
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcExpiryDate)<1,TIER.CNT> THEN
+        VALID.END.DATE = 1
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.START.DATE>
+*** <desc> </desc>
+VALIDATE.START.DATE:
+
+    VALIDATE.DATE = 0
+    ORG.AF = EB.SystemTables.getAf()
+    ORG.AV = EB.SystemTables.getAv()
+
+    EB.SystemTables.setAf(AA.Account.Account.AcStartDate)
+    ETEXT = "AA-START.DATE.LT.ARR.START.DATE"
+
+* NOTE: This validation is only for newly record or the date is modified.
+    GOSUB VALIDATE.EFFECTIVE.DATE       ;*Validate the date is not before EFF.DATE
+
+    EB.SystemTables.setAf(ORG.AF)
+    EB.SystemTables.setAv(ORG.AV)
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.END.DATE>
+*** <desc> </desc>
+VALIDATE.END.DATE:
+
+    VALIDATE.DATE = 0
+    ORG.AF = EB.SystemTables.getAf()
+    ORG.AV = EB.SystemTables.getAv()
+
+    EB.SystemTables.setAf(AA.Account.Account.AcExpiryDate)
+    ETEXT = "AA-EXPIRY.DATE.LT.ARR.START.DATE"
+
+* NOTE: This validation is only for newly record or the date is modified.
+    GOSUB VALIDATE.EFFECTIVE.DATE       ;*Validate the date is not before EFF.DATE
+
+    EB.SystemTables.setAf(ORG.AF)
+    EB.SystemTables.setAv(ORG.AV)
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.BOTH.DATES>
+*** <desc> </desc>
+VALIDATE.BOTH.DATES:
+
+    ORG.AF = EB.SystemTables.getAf()
+    ORG.AV = EB.SystemTables.getAv()
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcExpiryDate)<1,TIER.CNT> LT EB.SystemTables.getRNew(AA.Account.Account.AcStartDate)<1,TIER.CNT> THEN
+
+        EB.SystemTables.setAv(TIER.CNT)
+        EB.SystemTables.setAf(AA.Account.Account.AcExpiryDate)
+        EB.SystemTables.setEtext("AA-START.DATE.GT.EXPIRY.DATE")
+        EB.ErrorProcessing.StoreEndError()
+
+    END
+
+    EB.SystemTables.setAf(ORG.AF)
+    EB.SystemTables.setAv(ORG.AV)
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= COMMON.VALIDATE.POSTING.RESTRICTION>
+*** <desc> </desc>
+COMMON.VALIDATE.POSTING.RESTRICTION:
+
+    TOT.TIER.CNT = COUNT(EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict), @VM) + 1
+
+    FOR TIER.CNT = 1 TO TOT.TIER.CNT
+* Posting restriction id is unique
+        EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+        EB.Template.Dup()
+
+*Validate Posting restriction field set to null
+* case 1: other posting restriction related fields can only be null;
+* case 2: if one of them is null, then size cannot be more than 1.
+        GOSUB VALIDATE.POSTING.RESTRICTION.NULL
+
+    NEXT TIER.CNT
+  
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.BACKDATED.RESTRICTION.>
+*** <desc> </desc>
+VALIDATE.BACKDATED.RESTRICTION:
+* do not allow backdated activity to create or update any posting restriction related information
+
+
+    IF EFF.DATE LT EB.SystemTables.getToday() AND EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> THEN
+
+        NEW.R.POST = EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)
+
+        LOCATE EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> IN EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict)<1,1> SETTING TIER.POS THEN
+            GOSUB VALIDATE.BACKDATED.RESTRICTION.UPDATE
+        END ELSE
+            GOSUB VALIDATE.BACKDATED.RESTRICTION.NEW
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.RESTRICTION.REMOVAL>
+*** <desc> </desc>
+VALIDATE.RESTRICTION.REMOVAL:
+* validate there is no remove for the posting restriction.
+    IF EFF.DATE LT EB.SystemTables.getToday() THEN
+        IF EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict) THEN
+            TOT.TIER.CNT = COUNT(EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict), @VM) + 1
+        END ELSE
+            TOT.TIER.CNT = 0
+        END
+
+        FOR TIER.CNT = 1 TO TOT.TIER.CNT
+            LOCATE EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> IN EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,1> SETTING TIER.POS ELSE
+                EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+                EB.SystemTables.setAv('')
+                EB.SystemTables.setAs('')
+                EB.SystemTables.setEtext("AA-NO.BACKDATE.PS.REMOVE")
+                EB.ErrorProcessing.StoreEndError()
+            END
+        NEXT TIER.CNT
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.ACTIVE.RESTRICTION>
+*** <desc> </desc>
+VALIDATE.ACTIVE.RESTRICTION:
+
+    ACTIVE.RESTRICTION = 0
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> AND R.ACC<AC.AccountOpening.Account.PostingRestrict> THEN
+        LOCATE EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> IN R.ACC<AC.AccountOpening.Account.PostingRestrict,1> SETTING ACC.POS THEN
+            ACTIVE.RESTRICTION = 1
+        END
+    END
+
+    IF ACTIVE.RESTRICTION THEN
+        LOCATE EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> IN EB.SystemTables.getROld(AA.Account.Account.AcPostingRestrict)<1,1> SETTING TIER.POS THEN
+* modification case
+            IF EB.SystemTables.getROld(AA.Account.Account.AcStartDate)<1, TIER.POS> NE EB.SystemTables.getRNew(AA.Account.Account.AcStartDate)<1,TIER.CNT> THEN
+                EB.SystemTables.setAf(AA.Account.Account.AcStartDate)
+                EB.SystemTables.setAv(TIER.CNT)
+                EB.SystemTables.setEtext('AA-NOT.UPDATE.START.WHEN.PS.ACTIVE')
+                EB.ErrorProcessing.StoreEndError()
+            END
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+**** <region name= VALIDATE.POS.REASON.CODE>
+*** <desc> </desc>
+VALIDATE.POS.REASON.CODE:
+
+    LOCATE EB.SystemTables.getRNew(AA.CHECK.FIELD)<1, TIER.CNT> IN R.POSTING.RESTRICT<AC.CHECK.FIELD,1> SETTING C.POS ELSE
+        GOSUB GENERATE.ETEXT
+
+        EB.SystemTables.setAf(AA.CHECK.FIELD)
+        EB.SystemTables.setAv(TIER.CNT)
+        EB.SystemTables.setEtext(ERROR.TEXT)
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.BACKDATED.RESTRICTION.NEW>
+*** <desc> </desc>
+VALIDATE.BACKDATED.RESTRICTION.NEW:
+* This is newly created posting restriction
+
+    EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+    EB.SystemTables.setAv(TIER.CNT)
+    EB.SystemTables.setEtext("AA-NO.BACKDATE.PS.NEW")
+    EB.ErrorProcessing.StoreEndError()
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.BACKDATED.RESTRICTION.UPDATE>
+*** <desc> </desc>
+VALIDATE.BACKDATED.RESTRICTION.UPDATE:
+* find if there is any update inside the posting restriction value.
+
+    TOT.LIST.CNT = DCOUNT(PR.ATTRIBUTES, @FM)
+    FOR LIST.CNT = 1 TO TOT.LIST.CNT
+        IF EB.SystemTables.getROld(PR.ATTRIBUTES<LIST.CNT>)<1, TIER.POS> NE EB.SystemTables.getRNew(PR.ATTRIBUTES<LIST.CNT>)<1,TIER.CNT> THEN
+            EB.SystemTables.setAf(PR.ATTRIBUTES<LIST.CNT>)
+            EB.SystemTables.setAv(TIER.CNT)
+            EB.SystemTables.setEtext("AA-NO.BACKDATE.PS.UPDATE")
+            EB.ErrorProcessing.StoreEndError()
+        END
+    NEXT LIST.CNT
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+**** <region name= VALIDATE.BLOCK.UNBLOCK.REASON.CODE>
+*** <desc> </desc>
+VALIDATE.BLOCK.UNBLOCK.REASON.CODE:
+
+    R.POSTING.RESTRICT = AC.Config.PostingRestrict.Read(POST.RESTRICT, RET.ERR)
+
+* If there is no blocking code configured in POSTING.RESTRICT table, then could input any code
+    IF BLOCKING.CODE AND R.POSTING.RESTRICT<AC.Config.PostingRestrict.PosBlockReasonCodes> THEN
+        AA.CHECK.FIELD = AA.Account.Account.AcBlockingCode
+        AC.CHECK.FIELD = AC.Config.PostingRestrict.PosBlockReasonCodes
+        PREFIX.ID = "BLOCK.REASON.CODES*"
+        NAME.CODE = "Blocking"
+
+        GOSUB VALIDATE.POS.REASON.CODE
+    END
+
+* If there is no unblocking code configured in POSTING.RESTRICT table, then could input any code
+    IF UNBLOCKING.CODE AND R.POSTING.RESTRICT<AC.Config.PostingRestrict.PosUnblockReasonCodes> THEN
+        AA.CHECK.FIELD = AA.Account.Account.AcUnblockingCode
+        AC.CHECK.FIELD = AC.Config.PostingRestrict.PosUnblockReasonCodes
+        PREFIX.ID = "UNBLOCK.REASON.CODES*"
+        NAME.CODE = "Unblocking"
+
+        GOSUB VALIDATE.POS.REASON.CODE
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.NO.REVERSE.IF.POS.CHANGED>
+*** <desc> </desc>
+VALIDATE.NO.REVERSE.IF.POS.CHANGED:
+
+    STOP.CHECK = 0
+    EB.API.GetStandardSelectionDets('AA.ARR.ACCOUNT', SS.REC)
+
+    NEW.PROPERTY.RECORD = EB.SystemTables.getDynArrayFromRNew()
+
+    FULL.LIST.POS.FIELDS = PR.ATTRIBUTES
+    FULL.LIST.POS.FIELDS<-1> = AA.Account.Account.AcPostingRestrict
+
+    TOT.LIST.CNT = DCOUNT(FULL.LIST.POS.FIELDS, @FM)
+
+    FOR LIST.CNT = 1 TO TOT.LIST.CNT UNTIL STOP.CHECK
+
+        EB.API.FieldNumbersToNames(FULL.LIST.POS.FIELDS<LIST.CNT>, SS.REC, FIELD.NAME, DATA.TYPE, ERR.MSG)
+
+        LOCATE FIELD.NAME IN NEW.PROPERTY.RECORD<AA.Account.Account.AcChangedFields, 1> SETTING FLD.POS THEN
+            EB.SystemTables.setAf(AA.Account.Account.AcPostingRestrict)
+            EB.SystemTables.setEtext("AA-NO.REVERSE.IF.POS.CHANGED")
+            EB.ErrorProcessing.StoreEndError()
+            STOP.CHECK = 1
+        END
+
+    NEXT LIST.CNT
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.NEW.ARR.BACKDATED.RESTRICTION>
+*** <desc> </desc>
+VALIDATE.NEW.ARR.BACKDATED.RESTRICTION:
+* new arrangement activity, do not allow backdated activity to create or update any posting restriction triggered before today.
+    IF EFF.DATE LT EB.SystemTables.getToday() AND EB.SystemTables.getRNew(AA.Account.Account.AcPostingRestrict)<1,TIER.CNT> THEN
+        IF EB.SystemTables.getRNew(AA.Account.Account.AcStartDate)<1,TIER.CNT> LT EB.SystemTables.getToday() OR NOT(EB.SystemTables.getRNew(AA.Account.Account.AcStartDate)<1,TIER.CNT>) THEN
+            EB.SystemTables.setAf(AA.Account.Account.AcStartDate)
+            EB.SystemTables.setAv(TIER.CNT)
+            EB.SystemTables.setEtext("AA-NO.BACKDATE.PS.NEW")
+            EB.ErrorProcessing.StoreEndError()
+        END
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= GENERATE.ETEXT>
+*** <desc> </desc>
+GENERATE.ETEXT:
+
+    TOT.VALID.POS = 0
+
+* The else case is not valid, should not come here.
+    IF R.POSTING.RESTRICT<AC.CHECK.FIELD> THEN
+        TOT.VALID.POS = COUNT(R.POSTING.RESTRICT<AC.CHECK.FIELD>, @VM) + 1
+        ERROR.TEXT = 'AA-CODE.NOT.IN.PR':@FM:POST.RESTRICT:@VM:NAME.CODE
+
+        LIST.CODES.DESC = ''
+        FOR POS.CNT = 1 TO TOT.VALID.POS
+            F.FILE.NAME = ''
+            FULL.ID = PREFIX.ID:R.POSTING.RESTRICT<AC.CHECK.FIELD,POS.CNT>
+            EB.DataAccess.FRead('F.EB.LOOKUP', FULL.ID, LOOKUP.RECORD, F.FILE.NAME, "")
+
+            IF LIST.CODES.DESC THEN
+                LIST.CODES.DESC := ', ':LOOKUP.RECORD<EB.Template.Lookup.LuDescription>
+            END ELSE
+                LIST.CODES.DESC = LOOKUP.RECORD<EB.Template.Lookup.LuDescription>
+            END
+
+        NEXT POS.CNT
+
+        ERROR.TEXT := @VM:LIST.CODES.DESC
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VALIDATE.HVT.FLAG>
+*** <desc> Validate the HVT.FIAG field value against PASSBOOK</desc>
+VALIDATE.HVT.FLAG:
+** Passbooks are valid only for normal accounts.
+
+    IF EB.SystemTables.getRNew(AA.Account.Account.AcHvtFlag) EQ 'YES' AND EB.SystemTables.getRNew(AA.Account.Account.AcPassbook) EQ 'Y' THEN
+        EB.SystemTables.setAf(AA.Account.Account.AcPassbook)
+        EB.SystemTables.setEtext("AA-PASSBOOK.HVT.ACCOUNTS")
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= VAL.EXISTS.AC.TAKEOVER>
+*** <desc> Validate the Allow exists account takeover</desc>
+VAL.EXISTS.AC.TAKEOVER:
+    
+    AC.TAKOVER.ALLOWED = ""
+    ERROR.REC = ""
+    ERR.TEXT = ""
+    ERROR.REC = EB.ErrorProcessing.Error.CacheRead("AA-CONV.AC.TO.AR.ALLOWED",ERR.TEXT)   ;* Perform a Cache read on the error record to see if its available.
+
+    IF ERROR.REC THEN   ;* Error record is not available
+        AC.TAKOVER.ALLOWED = "1"
+    END
+        
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+*** <region name= CHECK.ACCOUNT.TAKEOVER.REVERSAL>
+*** <desc> Check if it is a takeover activity reversal</desc>
+CHECK.ACC.TAKEOVER.REV:
+
+    PRODUCT.LINE = AA.Framework.getActivityId()<AA.Framework.ActProductLine>       ;* Product line
+    CURRENT.ACTION = AA.Framework.getActivityId()<AA.Framework.ActActivity>       ;* Current activity to process
+    
+    IF PRODUCT.LINE MATCHES "ACCOUNTS":@VM:"DEPOSITS" AND CURRENT.ACTION = "TAKEOVER" THEN ;* Account take over and existing AC account takeover
+        EB.SystemTables.setAf(AA.Account.Account.AcAccountReference)
+        EB.SystemTables.setEtext("AA-REV.NOT.ALLOWED.AC.TO.AR.TAKEOVER") ;* Error when reverse the take over activity reversal
+        EB.ErrorProcessing.StoreEndError()
+   
+    END
+    
+RETURN
+*** </region>
+*-----------------------------------------------------------------------------
+END
