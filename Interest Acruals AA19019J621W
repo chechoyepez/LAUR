@@ -1,0 +1,953 @@
+
+
+
+
+
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   1
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+  ID PROPERTY.NAME..... AA19019J621W-PRINCIPALINT
+ ------------------------------------------------
+   1. 1 FROM.DATE...... 01 JUN 2021
+   2. 1 TO.DATE........ 08 JUN 2021
+   3. 1 DAYS........... 8
+   4. 1. 1 BALANCE..... 202,552.66
+   5. 1 BASIS.......... G
+   6. 1. 1 RATE........ 1.95
+   8. 1. 1 ACCRUAL.AMT. 87.73
+   9. 1. 1 ACT.ACC.AMT. 87.729118742
+  10. 1 COMPOUND.FQU... M06
+   1. 2 FROM.DATE...... 01 MAY 2021
+   2. 2 TO.DATE........ 31 MAY 2021
+   3. 2 DAYS........... 31
+   4. 2. 1 BALANCE..... 202,552.66
+   5. 2 BASIS.......... G
+   6. 2. 1 RATE........ 1.95
+   8. 2. 1 ACCRUAL.AMT. 339.60
+   9. 2. 1 ACT.ACC.AMT. 339.597148182
+  10. 2 COMPOUND.FQU... M06
+   1. 3 FROM.DATE...... 01 APR 2021
+   2. 3 TO.DATE........ 30 APR 2021
+   3. 3 DAYS........... 30
+   4. 3. 1 BALANCE..... 202,552.66
+   5. 3 BASIS.......... G
+   6. 3. 1 RATE........ 1.95
+   8. 3. 1 ACCRUAL.AMT. 328.11
+   9. 3. 1 ACT.ACC.AMT. 328.108455984
+  10. 3 COMPOUND.FQU... M06
+   1. 4 FROM.DATE...... 01 MAR 2021
+   2. 4 TO.DATE........ 31 MAR 2021
+   3. 4 DAYS........... 31
+   4. 4. 1 BALANCE..... 202,552.66
+   5. 4 BASIS.......... G
+   6. 4. 1 RATE........ 1.95
+   8. 4. 1 ACCRUAL.AMT. 338.49
+   9. 4. 1 ACT.ACC.AMT. 338.494562154
+  10. 4 COMPOUND.FQU... M06
+   1. 5 FROM.DATE...... 01 FEB 2021
+   2. 5 TO.DATE........ 28 FEB 2021
+   3. 5 DAYS........... 28
+   4. 5. 1 BALANCE..... 202,552.66
+   5. 5 BASIS.......... G
+   6. 5. 1 RATE........ 1.95
+   8. 5. 1 ACCRUAL.AMT. 305.26
+   9. 5. 1 ACT.ACC.AMT. 305.256561984
+  10. 5 COMPOUND.FQU... M06
+   1. 6 FROM.DATE...... 01 JAN 2021
+   2. 6 TO.DATE........ 31 JAN 2021
+   3. 6 DAYS........... 31
+   4. 6. 1 BALANCE..... 202,552.66
+   5. 6 BASIS.......... G
+   6. 6. 1 RATE........ 1.95
+   8. 6. 1 ACCRUAL.AMT. 337.43
+   9. 6. 1 ACT.ACC.AMT. 337.431532293
+  10. 6 COMPOUND.FQU... M06
+   1. 7 FROM.DATE...... 01 DEC 2020
+   2. 7 TO.DATE........ 31 DEC 2020
+   3. 7 DAYS........... 31
+   4. 7. 1 BALANCE..... 202,552.66
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   2
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   5. 7 BASIS.......... G
+   6. 7. 1 RATE........ 1.95
+   8. 7. 1 ACCRUAL.AMT. 336.87
+   9. 7. 1 ACT.ACC.AMT. 336.874333655
+  10. 7 COMPOUND.FQU... M06
+   1. 8 FROM.DATE...... 01 NOV 2020
+   2. 8 TO.DATE........ 30 NOV 2020
+   3. 8 DAYS........... 30
+   4. 8. 1 BALANCE..... 202,552.66
+   5. 8 BASIS.......... G
+   6. 8. 1 RATE........ 1.95
+   8. 8. 1 ACCRUAL.AMT. 325.48
+   9. 8. 1 ACT.ACC.AMT. 325.477762656
+  10. 8 COMPOUND.FQU... M06
+   1. 9 FROM.DATE...... 01 OCT 2020
+   2. 9 TO.DATE........ 31 OCT 2020
+   3. 9 DAYS........... 31
+   4. 9. 1 BALANCE..... 202,552.66
+   5. 9 BASIS.......... G
+   6. 9. 1 RATE........ 1.95
+   8. 9. 1 ACCRUAL.AMT. 335.78
+   9. 9. 1 ACT.ACC.AMT. 335.780594660
+  10. 9 COMPOUND.FQU... M06
+   1.10 FROM.DATE...... 01 SEP 2020
+   2.10 TO.DATE........ 30 SEP 2020
+   3.10 DAYS........... 30
+   4.10. 1 BALANCE..... 202,552.66
+   5.10 BASIS.......... G
+   6.10. 1 RATE........ 1.95
+   8.10. 1 ACCRUAL.AMT. 324.42
+   9.10. 1 ACT.ACC.AMT. 324.421017824
+  10.10 COMPOUND.FQU... M06
+   1.11 FROM.DATE...... 20 AUG 2020
+   2.11 TO.DATE........ 31 AUG 2020
+   3.11 DAYS........... 12
+   4.11. 1 BALANCE..... 202,552.66
+   5.11 BASIS.......... G
+   6.11. 1 RATE........ 1.95
+   8.11. 1 ACCRUAL.AMT. 129.62
+   9.11. 1 ACT.ACC.AMT. 129.623194332
+  10.11 COMPOUND.FQU... M06
+   1.12 FROM.DATE...... 06 AUG 2020
+   2.12 TO.DATE........ 19 AUG 2020
+   3.12 DAYS........... 14
+   4.12. 1 BALANCE..... 202,842.67
+   5.12 BASIS.......... G
+   6.12. 1 RATE........ 1.95
+   8.12. 1 ACCRUAL.AMT. 151.45
+   9.12. 1 ACT.ACC.AMT. 151.451656726
+  10.12 COMPOUND.FQU... M06
+   1.13 FROM.DATE...... 01 AUG 2020
+   2.13 TO.DATE........ 05 AUG 2020
+   3.13 DAYS........... 5
+   4.13. 1 BALANCE..... 203,132.46
+   5.13 BASIS.......... G
+   6.13. 1 RATE........ 1.95
+   8.13. 1 ACCRUAL.AMT. 54.18
+   9.13. 1 ACT.ACC.AMT. 54.180147836
+  10.13 COMPOUND.FQU... M06
+   1.14 FROM.DATE...... 23 JUL 2020
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   3
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   2.14 TO.DATE........ 31 JUL 2020
+   3.14 DAYS........... 9
+   4.14. 1 BALANCE..... 203,132.46
+   5.14 BASIS.......... G
+   6.14. 1 RATE........ 1.95
+   8.14. 1 ACCRUAL.AMT. 97.49
+   9.14. 1 ACT.ACC.AMT. 97.487879087
+  10.14 COMPOUND.FQU... M06
+   1.15 FROM.DATE...... 09 JUL 2020
+   2.15 TO.DATE........ 22 JUL 2020
+   3.15 DAYS........... 14
+   4.15. 1 BALANCE..... 203,422.04
+   5.15 BASIS.......... G
+   6.15. 1 RATE........ 1.95
+   8.15. 1 ACCRUAL.AMT. 151.88
+   9.15. 1 ACT.ACC.AMT. 151.884241978
+  10.15 COMPOUND.FQU... M06
+   1.16 FROM.DATE...... 01 JUL 2020
+   2.16 TO.DATE........ 08 JUL 2020
+   3.16 DAYS........... 8
+   4.16. 1 BALANCE..... 203,711.4
+   5.16 BASIS.......... G
+   6.16. 1 RATE........ 1.95
+   8.16. 1 ACCRUAL.AMT. 86.93
+   9.16. 1 ACT.ACC.AMT. 86.928352298
+  10.16 COMPOUND.FQU... M06
+   1.17 FROM.DATE...... 25 JUN 2020
+   2.17 TO.DATE........ 30 JUN 2020
+   3.17 DAYS........... 6
+   4.17. 1 BALANCE..... 203,711.4
+   5.17 BASIS.......... G
+   6.17. 1 RATE........ 1.95
+   8.17. 1 ACCRUAL.AMT. 65.17
+   9.17. 1 ACT.ACC.AMT. 65.171938397
+  10.17 COMPOUND.FQU... M06
+   1.18 FROM.DATE...... 11 JUN 2020
+   2.18 TO.DATE........ 24 JUN 2020
+   3.18 DAYS........... 14
+   4.18. 1 BALANCE..... 204,000.54
+   5.18 BASIS.......... G
+   6.18. 1 RATE........ 1.95
+   8.18. 1 ACCRUAL.AMT. 152.32
+   9.18. 1 ACT.ACC.AMT. 152.316175740
+  10.18 COMPOUND.FQU... M06
+   1.19 FROM.DATE...... 01 JUN 2020
+   2.19 TO.DATE........ 10 JUN 2020
+   3.19 DAYS........... 10
+   4.19. 1 BALANCE..... 204,289.47
+   5.19 BASIS.......... G
+   6.19. 1 RATE........ 1.95
+   8.19. 1 ACCRUAL.AMT. 108.96
+   9.19. 1 ACT.ACC.AMT. 108.962976177
+  10.19 COMPOUND.FQU... M06
+   1.20 FROM.DATE...... 28 MAY 2020
+   2.20 TO.DATE........ 31 MAY 2020
+   3.20 DAYS........... 4
+   4.20. 1 BALANCE..... 204,289.47
+   5.20 BASIS.......... G
+   6.20. 1 RATE........ 1.95
+   8.20. 1 ACCRUAL.AMT. 43.57
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   4
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   9.20. 1 ACT.ACC.AMT. 43.568927866
+  10.20 COMPOUND.FQU... M06
+   1.21 FROM.DATE...... 14 MAY 2020
+   2.21 TO.DATE........ 27 MAY 2020
+   3.21 DAYS........... 14
+   4.21. 1 BALANCE..... 204,578.18
+   5.21 BASIS.......... G
+   6.21. 1 RATE........ 1.95
+   8.21. 1 ACCRUAL.AMT. 152.75
+   9.21. 1 ACT.ACC.AMT. 152.747468142
+  10.21 COMPOUND.FQU... M06
+   1.22 FROM.DATE...... 01 MAY 2020
+   2.22 TO.DATE........ 13 MAY 2020
+   3.22 DAYS........... 13
+   4.22. 1 BALANCE..... 204,866.68
+   5.22 BASIS.......... G
+   6.22. 1 RATE........ 1.95
+   8.22. 1 ACCRUAL.AMT. 142.04
+   9.22. 1 ACT.ACC.AMT. 142.040741527
+  10.22 COMPOUND.FQU... M06
+   1.23 FROM.DATE...... 30 APR 2020
+   2.23 TO.DATE........ 30 APR 2020
+   3.23 DAYS........... 1
+   4.23. 1 BALANCE..... 204,866.68
+   5.23 BASIS.......... G
+   6.23. 1 RATE........ 1.95
+   8.23. 1 ACCRUAL.AMT. 10.92
+   9.23. 1 ACT.ACC.AMT. 10.922133972
+  10.23 COMPOUND.FQU... M06
+   1.24 FROM.DATE...... 22 APR 2020
+   2.24 TO.DATE........ 29 APR 2020
+   3.24 DAYS........... 8
+   4.24. 1 BALANCE..... 205,138.24
+   5.24 BASIS.......... G
+   6.24. 1 RATE........ 1.95
+   8.24. 1 ACCRUAL.AMT. 87.54
+   9.24. 1 ACT.ACC.AMT. 87.544354749
+  10.24 COMPOUND.FQU... M06
+   1.25 FROM.DATE...... 16 APR 2020
+   2.25 TO.DATE........ 21 APR 2020
+   3.25 DAYS........... 6
+   4.25. 1 BALANCE..... 205,138.24
+   5.25 BASIS.......... G
+   6.25. 1 RATE........ 2.45
+   8.25. 1 ACCRUAL.AMT. 82.36
+   9.25. 1 ACT.ACC.AMT. 82.357501399
+  10.25 COMPOUND.FQU... M06
+   1.26 FROM.DATE...... 02 APR 2020
+   2.26 TO.DATE........ 15 APR 2020
+   3.26 DAYS........... 14
+   4.26. 1 BALANCE..... 205,409.86
+   5.26 BASIS.......... G
+   6.26. 1 RATE........ 2.45
+   8.26. 1 ACCRUAL.AMT. 192.47
+   9.26. 1 ACT.ACC.AMT. 192.473453387
+  10.26 COMPOUND.FQU... M06
+   1.27 FROM.DATE...... 01 APR 2020
+   2.27 TO.DATE........ 01 APR 2020
+   3.27 DAYS........... 1
+   4.27. 1 BALANCE..... 205,664.52
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   5
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   5.27 BASIS.......... G
+   6.27. 1 RATE........ 2.45
+   8.27. 1 ACCRUAL.AMT. 13.77
+   9.27. 1 ACT.ACC.AMT. 13.772253261
+  10.27 COMPOUND.FQU... M06
+   1.28 FROM.DATE...... 22 MAR 2020
+   2.28 TO.DATE........ 31 MAR 2020
+   3.28 DAYS........... 10
+   4.28. 1 BALANCE..... 205,664.52
+   5.28 BASIS.......... G
+   6.28. 1 RATE........ 2.45
+   8.28. 1 ACCRUAL.AMT. 137.67
+   9.28. 1 ACT.ACC.AMT. 137.671871152
+  10.28 COMPOUND.FQU... M06
+   1.29 FROM.DATE...... 19 MAR 2020
+   2.29 TO.DATE........ 21 MAR 2020
+   3.29 DAYS........... 3
+   4.29. 1 BALANCE..... 205,664.52
+   5.29 BASIS.......... G
+   6.29. 1 RATE........ 3.45
+   8.29. 1 ACCRUAL.AMT. 57.99
+   9.29. 1 ACT.ACC.AMT. 57.988306053
+  10.29 COMPOUND.FQU... M06
+   1.30 FROM.DATE...... 05 MAR 2020
+   2.30 TO.DATE........ 18 MAR 2020
+   3.30 DAYS........... 14
+   4.30. 1 BALANCE..... 205,904.86
+   5.30 BASIS.......... G
+   6.30. 1 RATE........ 3.45
+   8.30. 1 ACCRUAL.AMT. 271.07
+   9.30. 1 ACT.ACC.AMT. 271.068412538
+  10.30 COMPOUND.FQU... M06
+   1.31 FROM.DATE...... 01 MAR 2020
+   2.31 TO.DATE........ 04 MAR 2020
+   3.31 DAYS........... 4
+   4.31. 1 BALANCE..... 206,144.89
+   5.31 BASIS.......... G
+   6.31. 1 RATE........ 3.45
+   8.31. 1 ACCRUAL.AMT. 77.57
+   9.31. 1 ACT.ACC.AMT. 77.574837441
+  10.31 COMPOUND.FQU... M06
+   1.32 FROM.DATE...... 20 FEB 2020
+   2.32 TO.DATE........ 29 FEB 2020
+   3.32 DAYS........... 10
+   4.32. 1 BALANCE..... 206,144.89
+   5.32 BASIS.......... G
+   6.32. 1 RATE........ 3.45
+   8.32. 1 ACCRUAL.AMT. 193.81
+   9.32. 1 ACT.ACC.AMT. 193.809568047
+  10.32 COMPOUND.FQU... M06
+   1.33 FROM.DATE...... 06 FEB 2020
+   2.33 TO.DATE........ 19 FEB 2020
+   3.33 DAYS........... 14
+   4.33. 1 BALANCE..... 206,384.6
+   5.33 BASIS.......... G
+   6.33. 1 RATE........ 3.45
+   8.33. 1 ACCRUAL.AMT. 271.70
+   9.33. 1 ACT.ACC.AMT. 271.699977423
+  10.33 COMPOUND.FQU... M06
+   1.34 FROM.DATE...... 01 FEB 2020
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   6
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   2.34 TO.DATE........ 05 FEB 2020
+   3.34 DAYS........... 5
+   4.34. 1 BALANCE..... 206,623.99
+   5.34 BASIS.......... G
+   6.34. 1 RATE........ 3.45
+   8.34. 1 ACCRUAL.AMT. 97.19
+   9.34. 1 ACT.ACC.AMT. 97.189344674
+  10.34 COMPOUND.FQU... M06
+   1.35 FROM.DATE...... 23 JAN 2020
+   2.35 TO.DATE........ 31 JAN 2020
+   3.35 DAYS........... 9
+   4.35. 1 BALANCE..... 206,623.99
+   5.35 BASIS.......... G
+   6.35. 1 RATE........ 3.45
+   8.35. 1 ACCRUAL.AMT. 174.83
+   9.35. 1 ACT.ACC.AMT. 174.825784609
+  10.35 COMPOUND.FQU... M06
+   1.36 FROM.DATE...... 09 JAN 2020
+   2.36 TO.DATE........ 22 JAN 2020
+   3.36 DAYS........... 14
+   4.36. 1 BALANCE..... 206,863.07
+   5.36 BASIS.......... G
+   6.36. 1 RATE........ 3.45
+   8.36. 1 ACCRUAL.AMT. 272.33
+   9.36. 1 ACT.ACC.AMT. 272.329871407
+  10.36 COMPOUND.FQU... M06
+   1.37 FROM.DATE...... 01 JAN 2020
+   2.37 TO.DATE........ 08 JAN 2020
+   3.37 DAYS........... 8
+   4.37. 1 BALANCE..... 207,101.84
+   5.37 BASIS.......... G
+   6.37. 1 RATE........ 3.45
+   8.37. 1 ACCRUAL.AMT. 155.84
+   9.37. 1 ACT.ACC.AMT. 155.840609381
+  10.37 COMPOUND.FQU... M06
+   1.38 FROM.DATE...... 26 DEC 2019
+   2.38 TO.DATE........ 31 DEC 2019
+   3.38 DAYS........... 6
+   4.38. 1 BALANCE..... 207,101.84
+   5.38 BASIS.......... G
+   6.38. 1 RATE........ 3.45
+   8.38. 1 ACCRUAL.AMT. 116.80
+   9.38. 1 ACT.ACC.AMT. 116.803596292
+  10.38 COMPOUND.FQU... M06
+   1.39 FROM.DATE...... 12 DEC 2019
+   2.39 TO.DATE........ 25 DEC 2019
+   3.39 DAYS........... 14
+   4.39. 1 BALANCE..... 207,340.29
+   5.39 BASIS.......... G
+   6.39. 1 RATE........ 3.45
+   8.39. 1 ACCRUAL.AMT. 272.96
+   9.39. 1 ACT.ACC.AMT. 272.958118924
+  10.39 COMPOUND.FQU... M06
+   1.40 FROM.DATE...... 01 DEC 2019
+   2.40 TO.DATE........ 11 DEC 2019
+   3.40 DAYS........... 11
+   4.40. 1 BALANCE..... 207,578.43
+   5.40 BASIS.......... G
+   6.40. 1 RATE........ 3.45
+   8.40. 1 ACCRUAL.AMT. 214.74
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   7
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   9.40. 1 ACT.ACC.AMT. 214.743681130
+  10.40 COMPOUND.FQU... M06
+   1.41 FROM.DATE...... 28 NOV 2019
+   2.41 TO.DATE........ 30 NOV 2019
+   3.41 DAYS........... 3
+   4.41. 1 BALANCE..... 207,578.43
+   5.41 BASIS.......... G
+   6.41. 1 RATE........ 3.45
+   8.41. 1 ACCRUAL.AMT. 58.53
+   9.41. 1 ACT.ACC.AMT. 58.527944127
+  10.41 COMPOUND.FQU... M06
+   1.42 FROM.DATE...... 14 NOV 2019
+   2.42 TO.DATE........ 27 NOV 2019
+   3.42 DAYS........... 14
+   4.42. 1 BALANCE..... 207,816.26
+   5.42 BASIS.......... G
+   6.42. 1 RATE........ 3.45
+   8.42. 1 ACCRUAL.AMT. 273.58
+   9.42. 1 ACT.ACC.AMT. 273.584722793
+  10.42 COMPOUND.FQU... M06
+   1.43 FROM.DATE...... 01 NOV 2019
+   2.43 TO.DATE........ 13 NOV 2019
+   3.43 DAYS........... 13
+   4.43. 1 BALANCE..... 208,053.77
+   5.43 BASIS.......... G
+   6.43. 1 RATE........ 3.45
+   8.43. 1 ACCRUAL.AMT. 254.35
+   9.43. 1 ACT.ACC.AMT. 254.345245447
+  10.43 COMPOUND.FQU... M06
+   1.44 FROM.DATE...... 31 OCT 2019
+   2.44 TO.DATE........ 31 OCT 2019
+   3.44 DAYS........... 1
+   4.44. 1 BALANCE..... 208,053.77
+   5.44 BASIS.......... G
+   6.44. 1 RATE........ 3.45
+   8.44. 1 ACCRUAL.AMT. 19.55
+   9.44. 1 ACT.ACC.AMT. 19.552151988
+  10.44 COMPOUND.FQU... M06
+   1.45 FROM.DATE...... 17 OCT 2019
+   2.45 TO.DATE........ 30 OCT 2019
+   3.45 DAYS........... 14
+   4.45. 1 BALANCE..... 208,290.97
+   5.45 BASIS.......... G
+   6.45. 1 RATE........ 3.45
+   8.45. 1 ACCRUAL.AMT. 274.21
+   9.45. 1 ACT.ACC.AMT. 274.209665159
+  10.45 COMPOUND.FQU... M06
+   1.46 FROM.DATE...... 03 OCT 2019
+   2.46 TO.DATE........ 16 OCT 2019
+   3.46 DAYS........... 14
+   4.46. 1 BALANCE..... 208,527.86
+   5.46 BASIS.......... G
+   6.46. 1 RATE........ 3.45
+   8.46. 1 ACCRUAL.AMT. 274.52
+   9.46. 1 ACT.ACC.AMT. 274.521527844
+  10.46 COMPOUND.FQU... M06
+   1.47 FROM.DATE...... 01 OCT 2019
+   2.47 TO.DATE........ 02 OCT 2019
+   3.47 DAYS........... 2
+   4.47. 1 BALANCE..... 208,764.44
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   8
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   5.47 BASIS.......... G
+   6.47. 1 RATE........ 3.45
+   8.47. 1 ACCRUAL.AMT. 39.28
+   9.47. 1 ACT.ACC.AMT. 39.283994442
+  10.47 COMPOUND.FQU... M06
+   1.48 FROM.DATE...... 19 SEP 2019
+   2.48 TO.DATE........ 30 SEP 2019
+   3.48 DAYS........... 12
+   4.48. 1 BALANCE..... 208,764.44
+   5.48 BASIS.......... G
+   6.48. 1 RATE........ 3.45
+   8.48. 1 ACCRUAL.AMT. 235.55
+   9.48. 1 ACT.ACC.AMT. 235.548981651
+  10.48 COMPOUND.FQU... M06
+   1.49 FROM.DATE...... 05 SEP 2019
+   2.49 TO.DATE........ 18 SEP 2019
+   3.49 DAYS........... 14
+   4.49. 1 BALANCE..... 209,000.71
+   5.49 BASIS.......... G
+   6.49. 1 RATE........ 3.45
+   8.49. 1 ACCRUAL.AMT. 275.14
+   9.49. 1 ACT.ACC.AMT. 275.144019304
+  10.49 COMPOUND.FQU... M06
+   1.50 FROM.DATE...... 01 SEP 2019
+   2.50 TO.DATE........ 04 SEP 2019
+   3.50 DAYS........... 4
+   4.50. 1 BALANCE..... 209,236.67
+   5.50 BASIS.......... G
+   6.50. 1 RATE........ 3.45
+   8.50. 1 ACCRUAL.AMT. 78.73
+   9.50. 1 ACT.ACC.AMT. 78.738312718
+  10.50 COMPOUND.FQU... M06
+   1.51 FROM.DATE...... 22 AUG 2019
+   2.51 TO.DATE........ 31 AUG 2019
+   3.51 DAYS........... 10
+   4.51. 1 BALANCE..... 209,236.67
+   5.51 BASIS.......... G
+   6.51. 1 RATE........ 3.45
+   8.51. 1 ACCRUAL.AMT. 196.72
+   9.51. 1 ACT.ACC.AMT. 196.716343544
+  10.51 COMPOUND.FQU... M06
+   1.52 FROM.DATE...... 08 AUG 2019
+   2.52 TO.DATE........ 21 AUG 2019
+   3.52 DAYS........... 14
+   4.52. 1 BALANCE..... 209,472.32
+   5.52 BASIS.......... G
+   6.52. 1 RATE........ 3.45
+   8.52. 1 ACCRUAL.AMT. 275.76
+   9.52. 1 ACT.ACC.AMT. 275.764884032
+  10.52 COMPOUND.FQU... M06
+   1.53 FROM.DATE...... 01 AUG 2019
+   2.53 TO.DATE........ 07 AUG 2019
+   3.53 DAYS........... 7
+   4.53. 1 BALANCE..... 209,707.66
+   5.53 BASIS.......... G
+   6.53. 1 RATE........ 3.45
+   8.53. 1 ACCRUAL.AMT. 138.08
+   9.53. 1 ACT.ACC.AMT. 138.082750442
+  10.53 COMPOUND.FQU... M06
+   1.54 FROM.DATE...... 25 JUL 2019
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page   9
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   2.54 TO.DATE........ 31 JUL 2019
+   3.54 DAYS........... 7
+   4.54. 1 BALANCE..... 209,707.66
+   5.54 BASIS.......... G
+   6.54. 1 RATE........ 3.45
+   8.54. 1 ACCRUAL.AMT. 137.99
+   9.54. 1 ACT.ACC.AMT. 137.991950409
+  10.54 COMPOUND.FQU... M06
+   1.55 FROM.DATE...... 11 JUL 2019
+   2.55 TO.DATE........ 24 JUL 2019
+   3.55 DAYS........... 14
+   4.55. 1 BALANCE..... 209,942.69
+   5.55 BASIS.......... G
+   6.55. 1 RATE........ 3.45
+   8.55. 1 ACCRUAL.AMT. 276.38
+   9.55. 1 ACT.ACC.AMT. 276.384112630
+  10.55 COMPOUND.FQU... M06
+   1.56 FROM.DATE...... 01 JUL 2019
+   2.56 TO.DATE........ 10 JUL 2019
+   3.56 DAYS........... 10
+   4.56. 1 BALANCE..... 210,177.41
+   5.56 BASIS.......... G
+   6.56. 1 RATE........ 3.45
+   8.56. 1 ACCRUAL.AMT. 197.67
+   9.56. 1 ACT.ACC.AMT. 197.675081091
+  10.56 COMPOUND.FQU... M06
+   1.57 FROM.DATE...... 27 JUN 2019
+   2.57 TO.DATE........ 30 JUN 2019
+   3.57 DAYS........... 4
+   4.57. 1 BALANCE..... 210,177.41
+   5.57 BASIS.......... G
+   6.57. 1 RATE........ 3.45
+   8.57. 1 ACCRUAL.AMT. 79.02
+   9.57. 1 ACT.ACC.AMT. 79.018034522
+  10.57 COMPOUND.FQU... M06
+   1.58 FROM.DATE...... 13 JUN 2019
+   2.58 TO.DATE........ 26 JUN 2019
+   3.58 DAYS........... 14
+   4.58. 1 BALANCE..... 210,411.82
+   5.58 BASIS.......... G
+   6.58. 1 RATE........ 3.45
+   8.58. 1 ACCRUAL.AMT. 277.00
+   9.58. 1 ACT.ACC.AMT. 277.001709798
+  10.58 COMPOUND.FQU... M06
+   1.59 FROM.DATE...... 01 JUN 2019
+   2.59 TO.DATE........ 12 JUN 2019
+   3.59 DAYS........... 12
+   4.59. 1 BALANCE..... 210,645.92
+   5.59 BASIS.......... G
+   6.59. 1 RATE........ 3.45
+   8.59. 1 ACCRUAL.AMT. 237.72
+   9.59. 1 ACT.ACC.AMT. 237.716529373
+  10.59 COMPOUND.FQU... M06
+   1.60 FROM.DATE...... 30 MAY 2019
+   2.60 TO.DATE........ 31 MAY 2019
+   3.60 DAYS........... 2
+   4.60. 1 BALANCE..... 210,645.92
+   5.60 BASIS.......... G
+   6.60. 1 RATE........ 3.45
+   8.60. 1 ACCRUAL.AMT. 39.59
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  10
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   9.60. 1 ACT.ACC.AMT. 39.593366752
+  10.60 COMPOUND.FQU... M06
+   1.61 FROM.DATE...... 16 MAY 2019
+   2.61 TO.DATE........ 29 MAY 2019
+   3.61 DAYS........... 14
+   4.61. 1 BALANCE..... 210,879.71
+   5.61 BASIS.......... G
+   6.61. 1 RATE........ 3.45
+   8.61. 1 ACCRUAL.AMT. 277.62
+   9.61. 1 ACT.ACC.AMT. 277.617675534
+  10.61 COMPOUND.FQU... M06
+   1.62 FROM.DATE...... 02 MAY 2019
+   2.62 TO.DATE........ 15 MAY 2019
+   3.62 DAYS........... 14
+   4.62. 1 BALANCE..... 211,113.19
+   5.62 BASIS.......... G
+   6.62. 1 RATE........ 3.45
+   8.62. 1 ACCRUAL.AMT. 277.93
+   9.62. 1 ACT.ACC.AMT. 277.925045206
+  10.62 COMPOUND.FQU... M06
+   1.63 FROM.DATE...... 01 MAY 2019
+   2.63 TO.DATE........ 01 MAY 2019
+   3.63 DAYS........... 1
+   4.63. 1 BALANCE..... 211,346.37
+   5.63 BASIS.......... G
+   6.63. 1 RATE........ 3.45
+   8.63. 1 ACCRUAL.AMT. 19.88
+   9.63. 1 ACT.ACC.AMT. 19.885857617
+  10.63 COMPOUND.FQU... M06
+   1.64 FROM.DATE...... 18 APR 2019
+   2.64 TO.DATE........ 30 APR 2019
+   3.64 DAYS........... 13
+   4.64. 1 BALANCE..... 211,346.37
+   5.64 BASIS.......... G
+   6.64. 1 RATE........ 3.45
+   8.64. 1 ACCRUAL.AMT. 258.35
+   9.64. 1 ACT.ACC.AMT. 258.346163500
+  10.64 COMPOUND.FQU... M06
+   1.65 FROM.DATE...... 04 APR 2019
+   2.65 TO.DATE........ 17 APR 2019
+   3.65 DAYS........... 14
+   4.65. 1 BALANCE..... 211,579.24
+   5.65 BASIS.......... G
+   6.65. 1 RATE........ 3.45
+   8.65. 1 ACCRUAL.AMT. 278.54
+   9.65. 1 ACT.ACC.AMT. 278.538588230
+  10.65 COMPOUND.FQU... M06
+   1.66 FROM.DATE...... 01 APR 2019
+   2.66 TO.DATE........ 03 APR 2019
+   3.66 DAYS........... 3
+   4.66. 1 BALANCE..... 211,811.81
+   5.66 BASIS.......... G
+   6.66. 1 RATE........ 3.45
+   8.66. 1 ACCRUAL.AMT. 59.78
+   9.66. 1 ACT.ACC.AMT. 59.783335877
+  10.66 COMPOUND.FQU... M06
+   1.67 FROM.DATE...... 21 MAR 2019
+   2.67 TO.DATE........ 31 MAR 2019
+   3.67 DAYS........... 11
+   4.67. 1 BALANCE..... 211,811.81
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  11
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   5.67 BASIS.......... G
+   6.67. 1 RATE........ 3.45
+   8.67. 1 ACCRUAL.AMT. 219.06
+   9.67. 1 ACT.ACC.AMT. 219.061425704
+  10.67 COMPOUND.FQU... M06
+   1.68 FROM.DATE...... 07 MAR 2019
+   2.68 TO.DATE........ 20 MAR 2019
+   3.68 DAYS........... 14
+   4.68. 1 BALANCE..... 212,044.07
+   5.68 BASIS.......... G
+   6.68. 1 RATE........ 3.45
+   8.68. 1 ACCRUAL.AMT. 279.15
+   9.68. 1 ACT.ACC.AMT. 279.150525196
+  10.68 COMPOUND.FQU... M06
+   1.69 FROM.DATE...... 01 MAR 2019
+   2.69 TO.DATE........ 06 MAR 2019
+   3.69 DAYS........... 6
+   4.69. 1 BALANCE..... 212,276.02
+   5.69 BASIS.......... G
+   6.69. 1 RATE........ 3.45
+   8.69. 1 ACCRUAL.AMT. 119.82
+   9.69. 1 ACT.ACC.AMT. 119.811824327
+  10.69 COMPOUND.FQU... M06
+   1.70 FROM.DATE...... 21 FEB 2019
+   2.70 TO.DATE........ 28 FEB 2019
+   3.70 DAYS........... 8
+   4.70. 1 BALANCE..... 212,276.02
+   5.70 BASIS.......... G
+   6.70. 1 RATE........ 3.45
+   8.70. 1 ACCRUAL.AMT. 159.64
+   9.70. 1 ACT.ACC.AMT. 159.644053807
+  10.70 COMPOUND.FQU... M06
+   1.71 FROM.DATE...... 07 FEB 2019
+   2.71 TO.DATE........ 20 FEB 2019
+   3.71 DAYS........... 14
+   4.71. 1 BALANCE..... 212,507.67
+   5.71 BASIS.......... G
+   6.71. 1 RATE........ 3.45
+   8.71. 1 ACCRUAL.AMT. 279.76
+   9.71. 1 ACT.ACC.AMT. 279.760840130
+  10.71 COMPOUND.FQU... M06
+   1.72 FROM.DATE...... 01 FEB 2019
+   2.72 TO.DATE........ 06 FEB 2019
+   3.72 DAYS........... 6
+   4.72. 1 BALANCE..... 212,739.01
+   5.72 BASIS.......... G
+   6.72. 1 RATE........ 3.45
+   8.72. 1 ACCRUAL.AMT. 120.08
+   9.72. 1 ACT.ACC.AMT. 120.073144605
+  10.72 COMPOUND.FQU... M06
+   1.73 FROM.DATE...... 24 JAN 2019
+   2.73 TO.DATE........ 31 JAN 2019
+   3.73 DAYS........... 8
+   4.73. 1 BALANCE..... 212,739.01
+   5.73 BASIS.......... G
+   6.73. 1 RATE........ 3.45
+   8.73. 1 ACCRUAL.AMT. 159.99
+   9.73. 1 ACT.ACC.AMT. 159.992249663
+  10.73 COMPOUND.FQU... M06
+   1.74 FROM.DATE...... 10 JAN 2019
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  12
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+   2.74 TO.DATE........ 23 JAN 2019
+   3.74 DAYS........... 14
+   4.74. 1 BALANCE..... 212,970.05
+   5.74 BASIS.......... G
+   6.74. 1 RATE........ 3.45
+   8.74. 1 ACCRUAL.AMT. 280.37
+   9.74. 1 ACT.ACC.AMT. 280.369553134
+  10.74 COMPOUND.FQU... M06
+  13. 1 PERIOD.START... 09 JAN 2019
+  14. 1 PERIOD.END..... 23 JAN 2019
+  15. 1 TOT.ACCR.AMT... 280.37
+  17. 1 TOT.DUE.AMT.... 280.37
+  13. 2 PERIOD.START... 23 JAN 2019
+  14. 2 PERIOD.END..... 06 FEB 2019
+  15. 2 TOT.ACCR.AMT... 280.07
+  17. 2 TOT.DUE.AMT.... 280.07
+  13. 3 PERIOD.START... 06 FEB 2019
+  14. 3 PERIOD.END..... 20 FEB 2019
+  15. 3 TOT.ACCR.AMT... 279.76
+  17. 3 TOT.DUE.AMT.... 279.76
+  13. 4 PERIOD.START... 20 FEB 2019
+  14. 4 PERIOD.END..... 06 MAR 2019
+  15. 4 TOT.ACCR.AMT... 279.46
+  17. 4 TOT.DUE.AMT.... 279.46
+  13. 5 PERIOD.START... 06 MAR 2019
+  14. 5 PERIOD.END..... 20 MAR 2019
+  15. 5 TOT.ACCR.AMT... 279.15
+  17. 5 TOT.DUE.AMT.... 279.15
+  13. 6 PERIOD.START... 20 MAR 2019
+  14. 6 PERIOD.END..... 03 APR 2019
+  15. 6 TOT.ACCR.AMT... 278.84
+  17. 6 TOT.DUE.AMT.... 278.84
+  13. 7 PERIOD.START... 03 APR 2019
+  14. 7 PERIOD.END..... 17 APR 2019
+  15. 7 TOT.ACCR.AMT... 278.54
+  17. 7 TOT.DUE.AMT.... 278.54
+  13. 8 PERIOD.START... 17 APR 2019
+  14. 8 PERIOD.END..... 01 MAY 2019
+  15. 8 TOT.ACCR.AMT... 278.23
+  17. 8 TOT.DUE.AMT.... 278.23
+  13. 9 PERIOD.START... 01 MAY 2019
+  14. 9 PERIOD.END..... 15 MAY 2019
+  15. 9 TOT.ACCR.AMT... 277.93
+  17. 9 TOT.DUE.AMT.... 277.93
+  13.10 PERIOD.START... 15 MAY 2019
+  14.10 PERIOD.END..... 29 MAY 2019
+  15.10 TOT.ACCR.AMT... 277.62
+  17.10 TOT.DUE.AMT.... 277.62
+  13.11 PERIOD.START... 29 MAY 2019
+  14.11 PERIOD.END..... 12 JUN 2019
+  15.11 TOT.ACCR.AMT... 277.31
+  17.11 TOT.DUE.AMT.... 277.31
+  13.12 PERIOD.START... 12 JUN 2019
+  14.12 PERIOD.END..... 26 JUN 2019
+  15.12 TOT.ACCR.AMT... 277
+  17.12 TOT.DUE.AMT.... 277
+  13.13 PERIOD.START... 26 JUN 2019
+  14.13 PERIOD.END..... 10 JUL 2019
+  15.13 TOT.ACCR.AMT... 276.69
+  17.13 TOT.DUE.AMT.... 276.69
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  13
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+  13.14 PERIOD.START... 10 JUL 2019
+  14.14 PERIOD.END..... 24 JUL 2019
+  15.14 TOT.ACCR.AMT... 276.38
+  17.14 TOT.DUE.AMT.... 276.38
+  13.15 PERIOD.START... 24 JUL 2019
+  14.15 PERIOD.END..... 07 AUG 2019
+  15.15 TOT.ACCR.AMT... 276.07
+  17.15 TOT.DUE.AMT.... 276.07
+  13.16 PERIOD.START... 07 AUG 2019
+  14.16 PERIOD.END..... 21 AUG 2019
+  15.16 TOT.ACCR.AMT... 275.76
+  17.16 TOT.DUE.AMT.... 275.76
+  13.17 PERIOD.START... 21 AUG 2019
+  14.17 PERIOD.END..... 04 SEP 2019
+  15.17 TOT.ACCR.AMT... 275.45
+  17.17 TOT.DUE.AMT.... 275.45
+  13.18 PERIOD.START... 04 SEP 2019
+  14.18 PERIOD.END..... 18 SEP 2019
+  15.18 TOT.ACCR.AMT... 275.14
+  17.18 TOT.DUE.AMT.... 275.14
+  13.19 PERIOD.START... 18 SEP 2019
+  14.19 PERIOD.END..... 02 OCT 2019
+  15.19 TOT.ACCR.AMT... 274.83
+  17.19 TOT.DUE.AMT.... 274.83
+  13.20 PERIOD.START... 02 OCT 2019
+  14.20 PERIOD.END..... 16 OCT 2019
+  15.20 TOT.ACCR.AMT... 274.52
+  17.20 TOT.DUE.AMT.... 274.52
+  13.21 PERIOD.START... 16 OCT 2019
+  14.21 PERIOD.END..... 30 OCT 2019
+  15.21 TOT.ACCR.AMT... 274.21
+  17.21 TOT.DUE.AMT.... 274.21
+  13.22 PERIOD.START... 30 OCT 2019
+  14.22 PERIOD.END..... 13 NOV 2019
+  15.22 TOT.ACCR.AMT... 273.9
+  17.22 TOT.DUE.AMT.... 273.9
+  13.23 PERIOD.START... 13 NOV 2019
+  14.23 PERIOD.END..... 27 NOV 2019
+  15.23 TOT.ACCR.AMT... 273.58
+  17.23 TOT.DUE.AMT.... 273.58
+  13.24 PERIOD.START... 27 NOV 2019
+  14.24 PERIOD.END..... 11 DEC 2019
+  15.24 TOT.ACCR.AMT... 273.27
+  17.24 TOT.DUE.AMT.... 273.27
+  13.25 PERIOD.START... 11 DEC 2019
+  14.25 PERIOD.END..... 25 DEC 2019
+  15.25 TOT.ACCR.AMT... 272.96
+  17.25 TOT.DUE.AMT.... 272.96
+  13.26 PERIOD.START... 25 DEC 2019
+  14.26 PERIOD.END..... 08 JAN 2020
+  15.26 TOT.ACCR.AMT... 272.64
+  17.26 TOT.DUE.AMT.... 272.64
+  13.27 PERIOD.START... 08 JAN 2020
+  14.27 PERIOD.END..... 22 JAN 2020
+  15.27 TOT.ACCR.AMT... 272.33
+  17.27 TOT.DUE.AMT.... 272.33
+  13.28 PERIOD.START... 22 JAN 2020
+  14.28 PERIOD.END..... 05 FEB 2020
+  15.28 TOT.ACCR.AMT... 272.02
+  17.28 TOT.DUE.AMT.... 272.02
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  14
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+  13.29 PERIOD.START... 05 FEB 2020
+  14.29 PERIOD.END..... 19 FEB 2020
+  15.29 TOT.ACCR.AMT... 271.7
+  17.29 TOT.DUE.AMT.... 271.7
+  13.30 PERIOD.START... 19 FEB 2020
+  14.30 PERIOD.END..... 04 MAR 2020
+  15.30 TOT.ACCR.AMT... 271.38
+  17.30 TOT.DUE.AMT.... 271.38
+  13.31 PERIOD.START... 04 MAR 2020
+  14.31 PERIOD.END..... 18 MAR 2020
+  15.31 TOT.ACCR.AMT... 271.07
+  17.31 TOT.DUE.AMT.... 271.07
+  13.32 PERIOD.START... 18 MAR 2020
+  14.32 PERIOD.END..... 01 APR 2020
+  15.32 TOT.ACCR.AMT... 209.43
+  17.32 TOT.DUE.AMT.... 209.43
+  13.33 PERIOD.START... 01 APR 2020
+  14.33 PERIOD.END..... 15 APR 2020
+  15.33 TOT.ACCR.AMT... 192.47
+  17.33 TOT.DUE.AMT.... 192.47
+  13.34 PERIOD.START... 15 APR 2020
+  14.34 PERIOD.END..... 29 APR 2020
+  15.34 TOT.ACCR.AMT... 169.9
+  17.34 TOT.DUE.AMT.... 169.9
+  13.35 PERIOD.START... 29 APR 2020
+  14.35 PERIOD.END..... 13 MAY 2020
+  15.35 TOT.ACCR.AMT... 152.96
+  17.35 TOT.DUE.AMT.... 152.96
+  13.36 PERIOD.START... 13 MAY 2020
+  14.36 PERIOD.END..... 27 MAY 2020
+  15.36 TOT.ACCR.AMT... 152.75
+  17.36 TOT.DUE.AMT.... 152.75
+  13.37 PERIOD.START... 27 MAY 2020
+  14.37 PERIOD.END..... 10 JUN 2020
+  15.37 TOT.ACCR.AMT... 152.53
+  17.37 TOT.DUE.AMT.... 152.53
+  13.38 PERIOD.START... 10 JUN 2020
+  14.38 PERIOD.END..... 24 JUN 2020
+  15.38 TOT.ACCR.AMT... 152.32
+  17.38 TOT.DUE.AMT.... 152.32
+  13.39 PERIOD.START... 24 JUN 2020
+  14.39 PERIOD.END..... 08 JUL 2020
+  15.39 TOT.ACCR.AMT... 152.1
+  17.39 TOT.DUE.AMT.... 152.1
+  13.40 PERIOD.START... 08 JUL 2020
+  14.40 PERIOD.END..... 22 JUL 2020
+  15.40 TOT.ACCR.AMT... 151.88
+  17.40 TOT.DUE.AMT.... 151.88
+  13.41 PERIOD.START... 22 JUL 2020
+  14.41 PERIOD.END..... 05 AUG 2020
+  15.41 TOT.ACCR.AMT... 151.67
+  17.41 TOT.DUE.AMT.... 151.67
+  13.42 PERIOD.START... 05 AUG 2020
+  14.42 PERIOD.END..... 19 AUG 2020
+  15.42 TOT.ACCR.AMT... 151.45
+  17.42 TOT.DUE.AMT.... 151.45
+  13.43 PERIOD.START... 19 AUG 2020
+  14.43 PERIOD.END..... 18 JUN 2021
+  15.43 TOT.ACCR.AMT... 1,986.61
+  21. 1 INT.EFF.DATE... 09 JAN 2019
+
+TER19944 B2B Branch 623 27 FEB 22 AA Interest accruals                 Page  15
+Area Implementation No 1                         Printed at 03 MAR 2022 10:38:15
+To   Implementation Implementation
+
+
+
+  23. 1. 1 PERIODIC.IND 06
+  92. 1 LINKED.INT.DATE 10 JAN 2019
+  93. 1 LINKED.INT.RATE 3.45
