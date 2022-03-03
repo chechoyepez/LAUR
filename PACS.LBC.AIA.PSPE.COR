@@ -1,0 +1,142 @@
+**===================================================================================================================================
+*-----------------------------------------------------------------------------
+* <Rating>-20</Rating>
+*-----------------------------------------------------------------------------
+    SUBROUTINE PACS.LBC.AIA.PSPE.COR
+**===================================================================================================================================
+* Program to update incorrect period from AA.INTEREST.ACCRUALS
+*
+**===================================================================================================================================
+    $INSERT I_COMMON
+    $INSERT I_EQUATE
+    $INSERT I_F.AA.INTEREST.ACCRUALS
+**===================================================================================================================================
+    GOSUB INIT
+	LOOP
+		REMOVE AA.ID FROM R.SL SETTING V.POS
+	WHILE AA.ID:V.POS
+
+		GOSUB PROCESS
+	REPEAT
+	CRT "Routine Completed"
+    RETURN
+**===================================================================================================================================
+INIT:
+	
+    FN.AIA = "F.AA.INTEREST.ACCRUALS"
+    F.AIA = ""
+    CALL OPF(FN.AIA, F.AIA)
+
+    FN.SL = "&SAVEDLISTS&"
+    F.SL = ""
+CALL OPF(FN.SL,F.SL)
+
+ CALL F.READ(FN.SL,'AIA.COR.PSPE',R.SL,F.SL,SL.ERR)
+	
+    RETURN
+**===================================================================================================================================
+PROCESS:
+	AA.ID1 = FIELD(AA.ID,'|',1)
+	JCnt = FIELD(AA.ID,'|',2)
+	CrCnt = FIELD(AA.ID,'|',3)
+	DrCnt = FIELD(AA.ID,'|',4)
+
+
+
+    AIA.ID = AA.ID1:"-PRINCIPALINT"
+
+IF JCnt NE '' THEN
+    R.AIA = ""
+    AIA.ERR = ""
+
+    CALL F.READ(FN.AIA, AIA.ID, R.AIA, F.AIA, AIA.ERR)
+
+    IF NOT(AIA.ERR) AND R.AIA THEN
+	              
+               
+        CNT.PR = DCOUNT(R.AIA<AA.INT.ACC.PERIOD.START>, VM)
+        
+	FOR IDX = JCnt TO CNT.PR
+	     CRT "Processing ":AIA.ID
+             DEL R.AIA<AA.INT.ACC.PERIOD.START, IDX>
+             DEL R.AIA<AA.INT.ACC.PERIOD.END, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.ACCR.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.SUSP.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.DUE.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RPY.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.ADJUST.INT.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RES.AMT, IDX>                
+		IDX = IDX - 1
+		CNT.PR = CNT.PR - 1
+	NEXT IDX
+        WRITE R.AIA TO F.AIA,AIA.ID 
+
+    END  
+END
+	AIA.ID = AA.ID1:"-ESCROWCRINT"
+IF CrCnt NE '' THEN
+    R.AIA = ""
+    AIA.ERR = ""
+
+    CALL F.READ(FN.AIA, AIA.ID, R.AIA, F.AIA, AIA.ERR)
+
+    IF NOT(AIA.ERR) AND R.AIA THEN
+	              
+               
+        CNT.PR = DCOUNT(R.AIA<AA.INT.ACC.PERIOD.START>, VM)
+        
+	FOR IDX = CrCnt TO CNT.PR
+
+	     CRT "Processing ":AIA.ID
+
+             DEL R.AIA<AA.INT.ACC.PERIOD.START, IDX>
+             DEL R.AIA<AA.INT.ACC.PERIOD.END, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.ACCR.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.SUSP.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.DUE.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RPY.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.ADJUST.INT.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RES.AMT, IDX>                
+		IDX = IDX - 1
+		CNT.PR = CNT.PR - 1
+	NEXT IDX
+        WRITE R.AIA TO F.AIA,AIA.ID 
+
+    END
+END
+	AIA.ID = AA.ID1:"-ESCROWDRINT"
+IF DrCnt NE '' THEN
+    R.AIA = ""
+    AIA.ERR = ""
+
+    CALL F.READ(FN.AIA, AIA.ID, R.AIA, F.AIA, AIA.ERR)
+
+    IF NOT(AIA.ERR) AND R.AIA THEN
+	              
+               
+        CNT.PR = DCOUNT(R.AIA<AA.INT.ACC.PERIOD.START>, VM)
+        
+	FOR IDX = DrCnt TO CNT.PR
+	     CRT "Processing ":AIA.ID
+
+             DEL R.AIA<AA.INT.ACC.PERIOD.START, IDX>
+             DEL R.AIA<AA.INT.ACC.PERIOD.END, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.ACCR.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.SUSP.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.DUE.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RPY.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.ADJUST.INT.AMT, IDX>
+             DEL R.AIA<AA.INT.ACC.TOT.RES.AMT, IDX>                
+		IDX = IDX - 1
+		CNT.PR = CNT.PR - 1
+	NEXT IDX
+        WRITE R.AIA TO F.AIA,AIA.ID 
+
+    END
+END
+	
+        RETURN
+**===================================================================================================================================
+*
+**===================================================================================================================================
+
